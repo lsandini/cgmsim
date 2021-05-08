@@ -188,12 +188,12 @@ The next steps involve:
 Log into your Ubuntu computer in terminal, change to the folder where you want to install the sim by typing: cd YOURFOLDER, and then run this command :
   git clone git://github.com/lsandini/cgmsim-2.git
 
-That's it, the folder should be populated
+That's it, the folder should be populated.
 
 2) Installing dependencies 
 
 
-In your linux termianl, type : __bash install_dependencies.sh__
+In your linux terminal, type : __bash install_dependencies.sh__
 
 3) Setting up your personal environment 
 
