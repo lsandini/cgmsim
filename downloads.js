@@ -5,9 +5,10 @@ const fs = require('fs');
 const api_url = process.env.API_URL;
 const api_profile = process.env.API_PROFILE;
 const api_sgv = process.env.API_SGV;
+const api_sgv1 = process.env.API_SGV1;
 
 var dir = './files';
-if (!fs.existsSync(dir)){
+if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
 }
 
@@ -42,4 +43,12 @@ fetch(api_sgv)
         })
     });
 
-
+fetch(api_sgv1)
+    .then(resSGV => resSGV.json())
+    .then(json => {
+        var jsonSGV = JSON.stringify(json, null, 4);
+        fs.writeFile('./files/sgv1.json', jsonSGV, 'utf8', (err) => {
+            if (err) throw err
+            console.log('File created!')
+        })
+    });
