@@ -167,7 +167,7 @@ Bolusing before meals is now automated, __*autobolus.js*__ tries to match the MD
 - To DO : use more than one ISF / CR value at different tmies of day, according to profile.
 
 
-Installation
+Installation 
 ============
 
 In order to use this simulator, you'll need an instance of Nightscout (NS). If you are not familiar with NS, go over to https://nightscout.github.io/nightscout/new_user/ and be sure to follow all the steps and perform this installation first.
@@ -182,32 +182,32 @@ The next steps involve:
 - kickstarting the simulator
 - scheduling the tasks
 
-1) Downloading the simulator
-=========================
+1) Downloading the simulator 
+
 
 Log into your Ubuntu computer in terminal, change to the folder where you want to install the sim by typing: cd YOURFOLDER, and then run this command :
   git clone git://github.com/lsandini/cgmsim-2.git
 
 That's it, the folder should be populated
 
-2) Installing dependencies
-==========================
+2) Installing dependencies 
+
 
 In your linux termianl, type : __bash install_dependencies.sh__
 
-3) Setting up your personal environment
-========================================
+3) Setting up your personal environment 
+
 
 At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. Look at the __.envSAMPLE__ file included as an example. The __API_KEY__ is the hashed (or "scrambled" version of your API_SECRET, the one that you set up during the NS installation. Here is how to find out what itis 
 https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/iPhone%20Shortcuts%20Integration.html#get-your-hashed-api-secret-while-logged-into-your-nightscout-site
 
-4) Kickstarting the simulation
-==============================
+4) Kickstarting the simulation 
+
 
 In your linux termianl, type : __bash kickstart_simulation.js__. This will create the first CGM value of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
 
-5) Scheduling tasks
-===================
+5) Scheduling tasks 
+
 
 In Linux, a service called __*cron*__ will execute the commands that you have specified in your settings. I added a __crontab.txt__ sample file to make the task easier. For this, in your Linux terminal, type crontab -e (and select nano or vi as your favourite text editor). Look at the sample file, and copy the lines in your own crontab.
 
