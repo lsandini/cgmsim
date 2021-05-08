@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "6095772b3920bf216a4430b2",
+    "dateString": "2021-05-07T17:21:40.629Z",
+    "sgv": 85,
+    "type": "sgv",
+    "direction": "Flat",
+    "date": 1620408100634,
+    "utcOffset": 0,
+    "sysTime": "2021-05-07T17:21:40.629Z"
+  },
+  {
+    "_id": "609574ae3920bf216a419ff3",
+    "dateString": "2021-05-07T17:11:06.775Z",
+    "sgv": 90,
+    "type": "sgv",
+    "direction": "Flat",
+    "date": 1620407466775,
+    "mills": 1620407466775,
+    "utcOffset": 0,
+    "sysTime": "2021-05-07T17:11:06.775Z"
+  },
+  {
+    "_id": "609574013920bf216a40e0e7",
+    "dateString": "2021-05-07T17:08:13.525Z",
+    "sgv": 90,
+    "type": "sgv",
+    "direction": "Flat",
+    "date": 1620407293525,
+    "mills": 1620407293525,
+    "utcOffset": 0,
+    "sysTime": "2021-05-07T17:08:13.525Z"
+  },
+  {
+    "_id": "609573443920bf216a400c16",
+    "dateString": "2021-05-07T17:05:04.747Z",
+    "sgv": 90,
+    "type": "sgv",
+    "direction": "Flat",
+    "date": 1620407104747,
+    "mills": 1620407104747,
+    "utcOffset": 0,
+    "sysTime": "2021-05-07T17:05:04.747Z"
+  },
+  {
+    "_id": "609570b73920bf216a3d7075",
+    "sgv": 90.96165897064091,
+    "type": "sgv",
+    "direction": "Flat",
+    "date": 1620406341364,
+    "utcOffset": 0,
+    "sysTime": "2021-05-07T16:54:15.686Z"
+  }
+]

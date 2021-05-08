@@ -1,0 +1,34 @@
+[
+    {
+        "time": 1620356950117,
+        "dateString": "2021-05-07T03:09:10.117Z",
+        "carbs": 36,
+        "enteredBy": "randomMealGenerator",
+        "reason": "breakfast",
+        "secret": "72ed4e79dec288f4b3e85466f1f92330771154ac"
+    },
+    {
+        "time": 1620368051644,
+        "dateString": "2021-05-07T06:14:11.644Z",
+        "carbs": 96,
+        "enteredBy": "randomMealGenerator",
+        "reason": "lunch",
+        "secret": "72ed4e79dec288f4b3e85466f1f92330771154ac"
+    },
+    {
+        "time": 1620379291683,
+        "dateString": "2021-05-07T09:21:31.683Z",
+        "carbs": 35,
+        "enteredBy": "randomMealGenerator",
+        "reason": "snack",
+        "secret": "72ed4e79dec288f4b3e85466f1f92330771154ac"
+    },
+    {
+        "time": 1620388631507,
+        "dateString": "2021-05-07T11:57:11.507Z",
+        "carbs": 99,
+        "enteredBy": "randomMealGenerator",
+        "reason": "dinner",
+        "secret": "72ed4e79dec288f4b3e85466f1f92330771154ac"
+    }
+]

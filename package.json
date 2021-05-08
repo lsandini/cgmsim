@@ -1,0 +1,23 @@
+{
+  "name": "cgmsim-2",
+  "version": "1.0.0",
+  "description": "CGM trace generator, simulation of Multiple Daily Insulin Injections or Continuous Subcutaneous Insulin Infusion",
+  "main": "all_meals.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsandini/cgmsim-2.git"
+  },
+  "keywords": [
+    "simulation",
+    "diabetes"
+  ],
+  "author": "Lorenzo Sandini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lsandini/cgmsim-2/issues"
+  },
+  "homepage": "https://github.com/lsandini/cgmsim-2#readme"
+}
