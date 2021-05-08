@@ -185,10 +185,10 @@ The next steps involve:
 1) Downloading the simulator 
 
 
-Log into your Ubuntu computer in terminal, change to the folder where you want to install the sim by typing: cd YOURFOLDER, and then run this command :
+Log into your Ubuntu computer in terminal, and then run this command :
   git clone git://github.com/lsandini/cgmsim-2.git
 
-That's it, the folder should be populated.
+That's it. A folder called cgmsim-2 has been made and all the needed files are in there.
 
 2) Installing dependencies 
 
