@@ -1,9 +1,10 @@
 SHELL=/bin/bash
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 
-0 */3 * * * cd /home/MYUSERNAME/cgmsim && /bin/bash perlin.sh
-*/5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash upload-cgmsim.sh
+0 */6 * * * cd /home/MYUSERNAME/cgmsim && /bin/bash perlin.sh
 */5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash get-all.sh
+*/5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash upload-cgmsim.sh
+
 
 # If you want to use the pump simulation enable these lines
 # */5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash /root/get-pump.sh
