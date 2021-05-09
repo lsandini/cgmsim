@@ -3,6 +3,9 @@ JSON.useDateParser();
 var resultGlaAct =0;
 const { pi } = require("mathjs");
 
+const dotenv = require('dotenv');
+var result = require('dotenv').config();
+
 const glargines = require('./files/last_glargine.json');
 const duration = 27;
 var jsongla = JSON.stringify(glargines);

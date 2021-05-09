@@ -1,3 +1,4 @@
+const dotenv = require('dotenv');
 var result = require('dotenv').config();
 var moment = require('moment'); 
 var fs = require('fs');

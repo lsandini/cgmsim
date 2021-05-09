@@ -1,7 +1,8 @@
-const result = require('dotenv').config();
+const dotenv = require('dotenv');
+var result = require('dotenv').config();
 require('json.date-extensions');
 JSON.useDateParser();
-var resultDetAct =0;
+var resultDetAct = 0;
 const weight = process.env.WEIGHT;
 const detemirs = require('./files/last_detemir.json');
 var jsondet = JSON.stringify(detemirs);

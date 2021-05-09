@@ -4,6 +4,9 @@ const profile = require('./files/profile.json');
 const pump_treatments = require('./files/entries.json');
 var moment = require('moment'); 
 
+const dotenv = require('dotenv');
+var result = require('dotenv').config();
+
 
 // here we start gathering the tempBasals from the default profile.json file
 //==========================================================================
