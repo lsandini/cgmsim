@@ -2,6 +2,10 @@
 
 sudo apt install npm
 
+sudo apt-get install -y libcurl4-openssl-dev
+
+sudo apt-get install -y jq
+
 npm install node-fetch
 
 npm install mathjs
@@ -14,9 +18,7 @@ npm install json.date-extensions
 
 npm install node-libcurl
 
-npm install xmlhttprequest
-
 npm add @babel/runtime
 
-sudo apt-get install -y jq
+
 
