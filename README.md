@@ -198,7 +198,7 @@ If you'd like to run more simulators on the same machine, just run:
 2) Installing dependencies 
 
 
-In your linux terminal, type : __bash install_dependencies.sh__
+In your linux terminal, type : __bash install_dependencies.sh__. You might see warnings and errors during the installation and it might take a little while. Just wait for the process to complete.
 
 3) Setting up your personal environment 
 
