@@ -211,7 +211,7 @@ Another way to find your "hashed" API_SECRET is to use an online Hash generator:
 4) Kickstarting the simulation 
 
 
-In your linux termianl, type : __node kickstart-simulation.js__. This will create the first CGM value of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
+In your linux termianl, type : __node kickstart-simulation.js__. This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
 
 5) Scheduling tasks 
 
@@ -223,6 +223,8 @@ In Linux, a service called __*cron*__ will execute the commands that you have sp
 - the third line launches the calculations and uploads the new computed sgv values to NS, every 5 minutes.
 
 - 2 more lines are commented out, but allow to use the simulator as a CSII (insulin pump) simulator and link the simulator to openAPS, Loop, FreeAPS, AndroidAPS, etc...
+
+It may take a few minutes until you get a second reading, after which a new value is generated and uploaded every 5 minutes.
 
 
 Make sure to report any bugs, suggest improvements, and spread the project. There is a lot to be done and the code will look awful to most NodeJS programmers  :D
