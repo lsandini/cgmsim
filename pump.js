@@ -130,7 +130,7 @@ fs.writeFile('./files/basalAsBoluses.json', new_babValues, (err) => {
 });
 
 
-var dia = process.env.DIA;
+var dia = parseInt(process.env.DIA);
 var td = dia * 60;
 var tp = process.env.TP;
 var tau = tp * (1 - tp / td) / (1 - 2 * tp / td);
