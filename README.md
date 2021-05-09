@@ -1,4 +1,4 @@
-GM trace generator, MDI only  or CSII (version 2.0)
+GM trace generator, MDI only  or CSII (version 2.0)  -- READ THE TO DO SECTION AT THE BOTTOM !!!
 ====================================================
 
 This application is simulating in an extremely basic way the effects food and various insulin analogs on continuous glucose monitor (CGM) curve in type 1 diabetes (T1D). It uses Nightscout (NS) as an input and visualization method.
@@ -228,3 +228,8 @@ It may take a few minutes until you get a second reading, after which a new valu
 
 
 Make sure to report any bugs, suggest improvements, and spread the project. There is a lot to be done and the code will look awful to most NodeJS programmers  :D
+
+
+TO DO 
+=====
+Fix the __upload-cgmsim.sh__ file where sgv1.json gets downloaded. Move it to the __upload-cgmsim.js__ file with a fetch()!!!
