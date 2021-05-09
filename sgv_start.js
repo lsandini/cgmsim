@@ -7,7 +7,7 @@ var jsonsgvs = JSON.stringify(sgvs);
 var sgvValues = JSON.parse(jsonsgvs);
 console.log(sgvValues);
 
-const ISF = process.env.ISF  //mmol/l/U
+const ISF = parseInt(process.env.ISF)  //mmol/l/U
 console.log('ISF=',ISF);
 
 var NR = require('./files/last_mealtime.json');
