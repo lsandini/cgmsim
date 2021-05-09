@@ -2,6 +2,8 @@
 require('json.date-extensions');
 JSON.useDateParser();
 
+const fs = require('fs');
+
 const entries = require('./files/entries.json');
 var json = JSON.stringify(entries);
 var notes = JSON.parseWithDate(json);
@@ -36,7 +38,7 @@ console.log('these are the last detemirs: ',lastDET);
 const datadet = JSON.stringify(lastDET, null, 4);
 const datagla = JSON.stringify(lastGLA, null, 4);
 
-const fs = require('fs');
+
 
 fs.writeFile('./files/last_detemir.json', datadet, (err) => {
     if (err) {

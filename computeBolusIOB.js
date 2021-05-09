@@ -14,11 +14,11 @@ console.log('this is the filtered treatments (insulin):',insulin);
 console.log('length',insulin.length) // returns the number of boluses or lenghth of the array
 
 // dia is the duration of insulin action in hours
-var dia = process.env.DIA;
+var dia = parseInt(process.env.DIA);
 // td is the total duration of insulin action in minutes
 var td = dia * 60;
 // tp is the time to the peak insulin action in minutes
-var tp = process.env.TP;
+var tp = parseInt(process.env.TP);
 
 
 

@@ -16,4 +16,4 @@ node carbs.js;
 
 node arrows.js;
 
-random_meal_upload.js
+node random_meal_upload.js
