@@ -203,8 +203,10 @@ In your linux terminal, type : __bash install_dependencies.sh__. You might see w
 3) Setting up your personal environment 
 
 
-At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. Look at the __.envSAMPLE__ file included as an example. The __API_KEY__ is the hashed (or "scrambled" version of your API_SECRET, the one that you set up during the NS installation. Here is how to find out what itis 
+At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. Look at the __.envSAMPLE__ file included as an example. The __API_KEY__ is the hashed (or "scrambled" version of your API_SECRET, the one that you set up during the NS installation. Here is how to find out what it is :
 https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/iPhone%20Shortcuts%20Integration.html#get-your-hashed-api-secret-while-logged-into-your-nightscout-site
+
+Another way to find your "hashed" API_SECRET is to use an online Hash generator: https://passwordsgenerator.net/sha1-hash-generator, enter your NS APISECRET in clear (e.g. MYAPISECRET1), select lower case hash, and generate. Copy the string into your .env file.
 
 4) Kickstarting the simulation 
 
