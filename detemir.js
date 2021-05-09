@@ -3,7 +3,7 @@ var result = require('dotenv').config();
 require('json.date-extensions');
 JSON.useDateParser();
 var resultDetAct = 0;
-const weight = process.env.WEIGHT;
+const weight = parseInt(process.env.WEIGHT);
 const detemirs = require('./files/last_detemir.json');
 var jsondet = JSON.stringify(detemirs);
 var detemir_data = JSON.parseWithDate(jsondet);
