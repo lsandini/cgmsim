@@ -4,6 +4,9 @@ var karbs = JSON.parse(jsonfood);
 var carbrate = 0;
 var COB = 0;
 
+const dotenv = require('dotenv');
+var result = require('dotenv').config();
+
 const carbAbsTime = parseInt(process.env.CARBS_ABS_TIME); // meal absoption time in min defautl 360 or 6 hours
 const fast_carbAbsTime = carbAbsTime/6;  // = 1 h or 60 min
 const slow_carbAbsTime = carbAbsTime/1.5;  // = 4 h or 240 min
