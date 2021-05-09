@@ -211,7 +211,7 @@ Another way to find your "hashed" API_SECRET is to use an online Hash generator:
 4) Kickstarting the simulation 
 
 
-In your linux termianl, type : __bash kickstart_simulation.js__. This will create the first CGM value of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
+In your linux termianl, type : __node kickstart-simulation.js__. This will create the first CGM value of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
 
 5) Scheduling tasks 
 
