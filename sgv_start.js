@@ -2,10 +2,27 @@ const dotenv = require('dotenv');
 var result = require('dotenv').config();
 var moment = require('moment'); 
 var fs = require('fs');
+const fetch = require('node-fetch');
+
+const api_sgv1 = process.env.API_SGV1;
+
+fetch(api_sgv1)
+    .then(resSGV => resSGV.json())
+    .then(json => {
+        var jsonSGV = JSON.stringify(json, null, 4);
+        fs.writeFile('./files/sgv1.json', jsonSGV, 'utf8', (err) => {
+            if (err) throw err
+            console.log('File created!')
+        })
+    });
+
 const sgvs = require('./files/sgv1.json');
+
 var jsonsgvs = JSON.stringify(sgvs);
 var sgvValues = JSON.parse(jsonsgvs);
 console.log(sgvValues);
+
+
 
 const ISF = parseInt(process.env.ISF)  //mmol/l/U
 console.log('ISF=',ISF);
@@ -22,9 +39,11 @@ var DET = require('./files/last_detemir_aggrACT.json');
 var jsonDET = JSON.stringify(DET);
 var detAct = JSON.parse(jsonDET);
 
-var pumpAct = require('./files/pumpBasalAct.json');
-var jsonPumpAct = JSON.stringify(pumpAct);
-var pumpBasalAct = JSON.parse(jsonPumpAct);
+// ENABLE THIS FOR PUMP SIMULATION
+//=================================
+// var pumpAct = require('./files/pumpBasalAct.json');
+// var jsonPumpAct = JSON.stringify(pumpAct);
+// var pumpBasalAct = JSON.parse(jsonPumpAct);
 
 let globalBasalAct = glaAct + detAct;
 let globalMealtimeAct = NRAct[0];
@@ -124,4 +143,4 @@ console.log('total BG impact of carbs for 5 minutes: +',carbs,'mmol/l');
 console.log('-------------------------------------------');
 console.log('total BG impact of carbs, liver and insulin for 5 minutes: +',(BGI_ins/18) + liver_bgi + carbs,'mmol/l');
 
-console.log('this is the pump basal insulin activity:', pumpBasalAct);
+//console.log('this is the pump basal insulin activity:', pumpBasalAct);
