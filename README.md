@@ -1,5 +1,5 @@
-CGM trace generator, MDI only  or CSII (version 2.0)  -- READ THE "TO DO" SECTION AT THE BOTTOM !!!
-====================================================
+GM trace generator, MDI only  or CSII (version 2.0)  
+===================================================
 
 This application is simulating in an extremely basic way the effects food and various insulin analogs on continuous glucose monitor (CGM) curve in type 1 diabetes (T1D). It uses Nightscout (NS) as an input and visualization method.
 
@@ -172,9 +172,7 @@ Installation
 
 In order to use this simulator, you'll need an instance of Nightscout (NS). If you are not familiar with NS, go over to https://nightscout.github.io/nightscout/new_user/ and be sure to follow all the steps and perform this installation first.
 
-The simulator itself works in a Linux Ubuntu 20.04 LTS environment. You'll need a computer or a virtual machine running Ubuntu in order to complete the CGMSIM installation. I have tested it using a virtual machine (droplet) on Digital Ocean, and on a RaspBerry Pi 3B. 
-
-I do not recommend running the simulation as the __root__ user. Instead, create a regular user with sudo privileges, in my case "lorenzo". There are plenty of tutorials for that. 
+The simulator itself works in a Linux Ubuntu 20.04 LTS environment. You'll need a computer or a virtual machine running Ubuntu in order to complete the CGMSIM-2 installation. I do not recommend running the simulation as the __root__ user. Instead, create a regular user with sudo privileges, in my case "lorenzo". There are plenty of tutorials for that. Once done, create a folder for this application, and name it whatever you like, for example "cgmsim".
 
 The next steps involve: 
 
@@ -200,25 +198,25 @@ If you'd like to run more simulators on the same machine, just run:
 2) Installing dependencies 
 
 
-In your linux terminal, type : __bash install_dependencies.sh__. You might see warnings and errors during the installation and it might take a little while. Don't worry, just wait for the process to complete. When it's all done, you'll be back at your command prompt.
+In your linux terminal, type : __bash install_dependencies.sh__. You might see warnings and errors during the installation and it might take a little while. Just wait for the process to complete.
 
 3) Setting up your personal environment 
 
 
-At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. Look at the __.envSAMPLE__ file included as an example. The __API_KEY__ is the hashed (or "scrambled") version of your API_SECRET, the one that you set up during the NS installation. Here is how to find out what it is :
+At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. Look at the __.envSAMPLE__ file included as an example. The __API_KEY__ is the hashed (or "scrambled" version of your API_SECRET, the one that you set up during the NS installation. Here is how to find out what it is :
 https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/iPhone%20Shortcuts%20Integration.html#get-your-hashed-api-secret-while-logged-into-your-nightscout-site
 
-Another way to find your "hashed" API_SECRET is to use an online Hash generator: https://passwordsgenerator.net/sha1-hash-generator. Enter your NS API_SECRET in clear (e.g. MYAPISECRET1), tick the "lower case hash" box, and click generate. Copy the string into your .env file.
+Another way to find your "hashed" API_SECRET is to use an online Hash generator: https://passwordsgenerator.net/sha1-hash-generator, enter your NS APISECRET in clear (e.g. MYAPISECRET1), select lower case hash, and generate. Copy the string into your .env file.
 
 4) Kickstarting the simulation 
 
 
-In your linux terminal, type : __node kickstart-simulation.js__. This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l. They should get uploaded immediately to your NS website.
+In your linux termianl, type : __node kickstart-simulation.js__. This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
 
 5) Scheduling tasks 
 
 
-In Linux, a service called __*cron*__ will execute the commands that you have specified in your settings. I added a __crontab.txt__ sample file to make the task easier. For this, in your Linux terminal, type crontab -e (and select nano or vi as your favourite text editor). Look at the provided sample file, and copy the lines in your own crontab.
+In Linux, a service called __*cron*__ will execute the commands that you have specified in your settings. I added a __crontab.txt__ sample file to make the task easier. For this, in your Linux terminal, type crontab -e (and select nano or vi as your favourite text editor). Look at the sample file, and copy the lines in your own crontab.
 
 - the first line reinitialises the perlin noise generator every 6 hours. 
 - the second line launches the downloading process of previous SGV data etc, every 5 minutes
@@ -226,12 +224,7 @@ In Linux, a service called __*cron*__ will execute the commands that you have sp
 
 - 2 more lines are commented out, but allow to use the simulator as a CSII (insulin pump) simulator and link the simulator to openAPS, Loop, FreeAPS, AndroidAPS, etc...
 
-It may take a few minutes until you get the next CGM reading, after which a new value is generated and uploaded every 5 minutes.
+It may take a few minutes until you get a second reading, after which a new value is generated and uploaded every 5 minutes.
 
 
 Make sure to report any bugs, suggest improvements, and spread the project. There is a lot to be done and the code will look awful to most NodeJS programmers  :D
-
-
-TO DO 
-=====
-Fix the __upload-cgmsim.sh__ file where sgv1.json gets downloaded. Move it to the __upload-cgmsim.js__ file with a fetch()!!!
