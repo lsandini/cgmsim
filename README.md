@@ -186,12 +186,15 @@ The next steps involve:
 
 
 Log into your Ubuntu computer in terminal, and then run this command :
-  git clone https://github.com/lsandini/cgmsim.git
+
+git clone https://github.com/lsandini/cgmsim.git
 
 That's it. A folder called cgmsim has been made and all the needed files are in there.
 
 If you'd like to run more simulators on the same machine, just run:
-  git clone https://github.com/lsandini/cgmsim.git cgmsim2
+
+git clone https://github.com/lsandini/cgmsim.git cgmsim2
+
 ... and a separate folder called "cgmsim2" is made, identical to "cgmsim" 
  
 
