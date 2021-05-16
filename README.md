@@ -98,7 +98,7 @@ The EGP is significantly affected but the insulin activity, since in the replete
 
 __16.05.2021__ This feature is not yet in use, but a sinusoidal function is added, with which the liver blood glucose impact can be set to vary in a sinusoidal manner. The file __*sinus.js*__ creates the waveforms, and __*liver.js*__ computes and writes __*latest_liver.json*__, not in use yet. This can be added to __*sgv_start.js*__ later.
 
-
+![595142-20200914215212221-2008104967](https://user-images.githubusercontent.com/18611419/118400717-71af4580-b66b-11eb-9356-abb859db304f.jpg)
 
 
 Modeling exercise
