@@ -96,7 +96,7 @@ While this is absolutely neither true nor realistic, for the time being the EGP 
 
 The EGP is significantly affected but the insulin activity, since in the repleted rested state, insulin decreases the liver glucose production more than it increases the peripheral glucose uptake. Moreover other factor like the ingestion of alcohol will significantly decrease the EGP, which could be simple modeled in the future.
 
-__16.05.2021__ This feature is not yet in use, but a sinusoidal function is added, with which the liver blood glucose impact can be set to vary in a sinusoidal manner. The file __*sinus.js*__ creates the waveforms, and __*liver.js*__ computes and writes __*latest_liver.json*__, not in use yet. This can be added to __*sgv_start.js*__ later.
+__16.05.2021__ This feature is not yet in use, but a sinusoidal function is added, with which the liver blood glucose impact can be set to vary in a sinusoidal or cosinusoidal manner. The file __*sinus.js*__ creates the waveforms, and __*liver.js*__ computes and writes __*latest_liver.json*__, not in use yet. This can be added to __*sgv_start.js*__ later.
 
 ![595142-20200914215212221-2008104967](https://user-images.githubusercontent.com/18611419/118400717-71af4580-b66b-11eb-9356-abb859db304f.jpg)
 
