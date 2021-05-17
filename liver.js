@@ -10,18 +10,18 @@ console.log('cosinus: ', cosinus);
 
 
 // let's simulate the carb inpact of the liver, producing 10g of carbs / hour
-// if the ISF is 1 mmol/l/U,
+// if the ISF is 2 mmol/l/U,
 // and the CR is 10g/U,
-// => the the CF (carb factor) is 1 mmol/l/10g
-// so the BG increases 1 mmol/l/h, (every time 10g of carbs are delivered)
+// => the the CF (carb factor) is 2 mmol/l/10g
+// so the BG increases 2 mmol/l/h, (every time 10g of carbs are delivered)
 
-// 1 mmol/l/h / (60min*60sec*1000) = 1/3'600'000 mmol/l/ms
-// 1 mmol/l/h /12 = bgi every 5 minutes or 0,0833 mmol/l/5min
+// 2 mmol/l/h / (60min*60sec*1000) = 2/3'600'000 mmol/l/ms
+// 1 mmol/l/h /12 = bgi every 5 minutes or 1,66666 mmol/l/5min
 
 // by multiplying the liver_bgi by the sin function, the liver loog glucose production varies in a sinusoidal 
 // form, being maximal at 6 AM and minimal ad 6 PM
 
-const liver_bgi = 0.0833;
+const liver_bgi = 0.1666;
 console.log('liver_bgi: ', liver_bgi);
 console.log('liver_bgi * sinus: ', liver_bgi * sinus);
 
