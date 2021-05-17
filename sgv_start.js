@@ -43,11 +43,15 @@ let BGI_ins = globlalInsulinAct * ISF * -90;
 
 var today = new Date();
 
+
+
 // here is the liver BG impact
-// 1 mmol/l/h is 0.083333 mmol/l/5 min
-var rnd = (Math.random() * (1.5 - 0.5) + 0.6);
+const liver = require('./files/latest_liver.json');
+console.log('liver: ', liver);
+const liver_bgi = liver;
+// var rnd = (Math.random() * (1.5 - 0.5) + 0.6);
 //var liver_bgi = rnd * 0.0833;
-var liver_bgi = rnd * 0.12;
+// var liver_bgi = rnd * 0.12;
 
 
 
