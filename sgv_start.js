@@ -83,26 +83,38 @@ console.log('this is the last perlin noise value:', lastPerls[0].noise);
 
 // END OF PERLIN NOISE SECTION
 
-var limited_sgv = sgvValues[0].sgv;
 
-if (sgvValues[0].sgv >= 400) {
-     limited_sgv = 400;}
-    else if (sgvValues[0].sgv <=40) {
-      limited_sgv = 40;
-};
 
 
 //WITH PUMP
 //==========
-// var dict = {"dateString" : today, "sgv" :  Math.floor(limited_sgv + pumpBasalAct + BGI_ins + (liver_bgi * 18) + (carbs * 18) + (lastPerls[0].noise * 18 *6)), "type" : "sgv", "direction": arrowValues[0].direction, "date" : Date.now(), 
+// var sgv_pump = Math.floor(sgvValues[0].sgv + pumpBasalAct + BGI_ins + (liver_bgi * 18) + (carbs * 18) + (lastPerls[0].noise * 18 *6));
+// var limited_sgv_pump = sgv_pump;
+// if (sgv_pump >= 400) {
+//     limited_sgv_pump = 400;}
+//     else if (sgv_pump <=40) {
+//         limited_sgv_pump = 40;
+// };
+// var dict = {"dateString" : today, "sgv" : limited_sgv_pump, "type" : "sgv", "direction": arrowValues[0].direction, "date" : Date.now(), 
 //      };
 // var dictstring = JSON.stringify(dict);
 
+
+
+
 //WITHOUT PUMP
 //============
-var dict = {"dateString" : today, "sgv" :  Math.floor(limited_sgv + BGI_ins + (liver_bgi * 18) + (carbs * 18) + (lastPerls[0].noise * 18 *6)), "type" : "sgv", "direction": arrowValues[0].direction, "date" : Date.now(), 
+var sgv_no_pump = Math.floor(sgvValues[0].sgv + BGI_ins + (liver_bgi * 18) + (carbs * 18) + (lastPerls[0].noise * 18 *6));
+var limited_sgv_no_pump = sgv_no_pump;
+if (sgv_no_pump >= 400) {
+    limited_sgv_no_pump = 400;}
+    else if (sgv_no_pump <=40) {
+        limited_sgv_no_pump = 40;
+};
+var dict = {"dateString" : today, "sgv" :  limited_sgv_no_pump, "type" : "sgv", "direction": arrowValues[0].direction, "date" : Date.now(), 
      };
 var dictstring = JSON.stringify(dict);
+
 
 
 
