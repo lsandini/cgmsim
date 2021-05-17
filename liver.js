@@ -21,7 +21,9 @@ console.log('cosinus: ', cosinus);
 // by multiplying the liver_bgi by the sin function, the liver loog glucose production varies in a sinusoidal 
 // form, being maximal at 6 AM and minimal ad 6 PM
 
-var liver_bgi = 0.0833;
+const liver_bgi = 0.0833;
+console.log('liver_bgi: ', liver_bgi);
+console.log('liver_bgi * sinus: ', liver_bgi * sinus);
 
 // var liver_bgi = 0.0833 * sinus;
 

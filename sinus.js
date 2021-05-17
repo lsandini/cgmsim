@@ -53,20 +53,20 @@ console.log ('value of the sin function oscillating between 0 and 2: ', SINinter
 
 
 //==========================================================================================
-// value of the sin function oscillating around 1, +/- 0.5
+// value of the sin function oscillating around 1, +/- 20 %
 //==========================================================================================
 var sinFunction = (Math.sin(daycycledeg * Math.PI / 180));
-var SINcorr = (sinFunction/2) + 1; 
-console.log ('value of the sin function oscillating around 1, +/- 0.5, starting from 1 and ending in 1: ', SINcorr.toFixed(2));
+var SINcorr = (sinFunction/5) + 1; 
+console.log ('value of the sin function oscillating around 1, +/- 20 %, starting from 1 and ending in 1: ', SINcorr.toFixed(2));
 console.log ("When the time of day is " + hours.toFixed() + " hours and " + minutes.toFixed() + " minutes, the sinusoidal value is: " + SINcorr.toFixed(3)); 
 
 
 
 //==========================================================================================
-// value of the cos function oscillating around 1, +/- 0.5
+// value of the cos function oscillating around 1, +/- 20 %
 //==========================================================================================
 var cosinFunction = (Math.cos(daycycledeg * Math.PI / 180));
-var COScorr = (cosinFunction/2) +1; 
+var COScorr = (cosinFunction/5) +1; 
 console.log ('value of the cos function oscillating around 1, +/- 0.5, starting from 1.5 and ending in 1.5: : ', COScorr.toFixed(2));
 console.log ("When the time of day is " + hours.toFixed() + " hours and " + minutes.toFixed() + " minutes, the cosinusoidal value is: " + COScorr.toFixed(3)); 
 
