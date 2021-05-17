@@ -21,13 +21,14 @@ console.log('cosinus: ', cosinus);
 // by multiplying the liver_bgi by the sin function, the liver loog glucose production varies in a sinusoidal 
 // form, being maximal at 6 AM and minimal ad 6 PM
 
-const liver_bgi = 0.1666;
-console.log('liver_bgi: ', liver_bgi);
-console.log('liver_bgi * sinus: ', liver_bgi * sinus);
+const liver = 0.1666;
+const liver_sin = liver_bgi * sinus;
+console.log('liver: ', liver);
+console.log('liver_sin: ', liver_sin);
 
 // var liver_bgi = 0.0833 * sinus;
 
-let liverString = JSON.stringify(liver_bgi);
+let liverString = JSON.stringify(liver_sin);
 const fs = require('fs');
 fs.writeFile("./files/latest_liver.json", liverString, function(err, result) {
 if(err) console.log('error', err);
