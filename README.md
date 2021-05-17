@@ -176,26 +176,26 @@ Bolusing before meals is now automated, __*autobolus.js*__ tries to match the MD
 Installation 
 ============
 
-In order to use this simulator, you'll need an instance of Nightscout (NS). If you are not familiar with NS, go over to https://nightscout.github.io/nightscout/new_user/ and be sure to follow all the steps and perform this installation first.
+In order to use this simulator, you'll need an instance of Nightscout (NS). If you are not familiar with NS, go over to https://nightscout.github.io/nightscout/new_user/ and be sure to follow all the steps and perform this installation first. Make sure to write down the URL and the APISECRET (for example "MYAPISECRET1").
 
-The simulator itself works in a Linux Ubuntu 20.04 LTS environment. You'll need a computer or a virtual machine running Ubuntu in order to complete the CGMSIM-2 installation. I do not recommend running the simulation as the __root__ user. Instead, create a regular user with sudo privileges, in my case "lorenzo". There are plenty of tutorials for that. Once done, create a folder for this application, and name it whatever you like, for example "cgmsim".
+The simulator itself works in a Linux Ubuntu 20.04 LTS environment. You'll need a computer or a virtual machine running Ubuntu in order to complete the CGMSIM-2 installation. I do not recommend running the simulation as the __root__ user. Instead, create a regular user with sudo privileges, in my case "lorenzo". There are plenty of tutorials for that.
 
 The next steps involve: 
 
 - downloading all the files from this Github repository
 - installating the dependencies necessary for running the simulator
-- setting up the environment
+- setting up the environment variables
 - kickstarting the simulator
 - scheduling the tasks
 
 1) Downloading the simulator 
 
 
-Log into your Ubuntu computer in terminal, and then run this command :
+Log into your Ubuntu terminal, and then run this command :
 
 git clone https://github.com/lsandini/cgmsim.git
 
-That's it. A folder called cgmsim has been made and all the needed files are in there.
+That's it. A folder called cgmsim has been made for you and all the needed files are in there.
 
 If you'd like to run more simulators on the same machine, just run:
 
@@ -207,20 +207,19 @@ git clone https://github.com/lsandini/cgmsim.git cgmsim2
 2) Installing dependencies 
 
 
-In your linux terminal, type : __bash install_dependencies.sh__. You might see warnings and errors during the installation and it might take a little while. Just wait for the process to complete.
+In your linux terminal, type : __bash install_dependencies.sh__. You might see warnings during the installation and it might take a little while. Just wait for the process to complete.
 
 3) Setting up your personal environment 
 
 
-At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. Look at the __.envSAMPLE__ file included as an example. The __API_KEY__ is the hashed (or "scrambled" version of your API_SECRET, the one that you set up during the NS installation. Here is how to find out what it is :
-https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/iPhone%20Shortcuts%20Integration.html#get-your-hashed-api-secret-while-logged-into-your-nightscout-site
+At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. Look at the __.envSAMPLE__ file included as an example. The __API_KEY__ is the hashed (or "scrambled" version of your APISECRET, the one that you set up during the NS installation. 
 
-Another way to find your "hashed" API_SECRET is to use an online Hash generator: https://passwordsgenerator.net/sha1-hash-generator, enter your NS APISECRET in clear (e.g. MYAPISECRET1), select lower case hash, and generate. Copy the string into your .env file.
+To make a "hashed" APISECRET is to use an online Hash generator: https://passwordsgenerator.net/sha1-hash-generator, enter your NS APISECRET in clear (e.g. MYAPISECRET1), select lower case hash, and generate. Copy the string into your .env file, and modify all lines adding your specific URL details.
 
 4) Kickstarting the simulation 
 
 
-In your linux termianl, type : __node kickstart-simulation.js__. This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
+In your linux terminal, type : __node kickstart-simulation.js__. This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
 
 5) Scheduling tasks 
 
