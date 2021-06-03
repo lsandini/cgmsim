@@ -17,7 +17,15 @@ let timeSinceGlargineAct = glargine_data.map(entry => {
 
     var time = entry.time;
     var dose = entry.dose;
-    return { ...entry, time: time, glargineActivity: (2 * Math.sqrt((Math.pow(((2*dose)/(Math.PI*duration)),2)) * (1 + (2 * (Math.pow((time-(duration/2)),2) / Math.pow(duration,2) ) ) ),2))/60 };
+    var b = (2 * dose) / (Math.PI * duration);
+    var bb = Math.pow(b,2);
+    var g = time - (duration / 2);
+    var gg = Math.pow(g,2);
+    var h = duration / 2;
+    var hh =  Math.pow(h,2);
+    var z = (time - gg) / hh;
+    var y = (2 * (Math.sqrt(bb*(1 + z)))) / 60;
+    return { ...entry, time: time, old: (2 * Math.sqrt((Math.pow(((2*dose)/(Math.PI*duration)),2)) * (1 + (2 * (Math.pow((time-(duration/2)),2) / Math.pow(duration,2) ) ) ),2))/60, glargineActivity: y };
 
 });
 console.log('the is the accumulated glargine activity:', timeSinceGlargineAct);
