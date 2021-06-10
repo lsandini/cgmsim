@@ -13,19 +13,27 @@ const slow_carbAbsTime = carbAbsTime/1.5;  // = 4 h or 240 min
 const ISF = process.env.ISF; // insulin sensitivity factor in mmol/l/U, default 2
 const CR = process.env.CR; // carb ratio in g/U, default 10
 
-
 let timeSinceMealAct = karbs.map(entry => {
     var t = entry.time;
     var carbs_g = entry.carbs;
+
+    // the first 40g of every meal are always considered fast carbs
+    var fast = Math.min(entry.carbs,40);
+
+    // the amount exceeding 40 grams will be randomly split into fast and slow carbs
+    var rest = entry.carbs - fast; 
     var FSR = (Math.random() * (0.4 - 0.1) + 0.1);  // FSR = FAST RANDOM RATIO
 
-    var fast_carbs = FSR * entry.carbs;
-    var slow_carbs = (1-FSR) * entry.carbs;
+    // all fast carbs counted together
+    var fast_carbs = fast + (FSR * rest);
+
+    // the remainder is slow carbs
+    var slow_carbs = (1-FSR) * rest;
 
         //console.log(fast_random_ratio);
         //console.log(fast_carbs);
         //console.log(slow_carbs);
-
+        console.log('carbs_g:',carbs_g,'fast:', fast, 'rest:', rest, 'fast_carbs:', fast_carbs, 'slow_carbs:', slow_carbs);
 
         if (t < (fast_carbAbsTime/2)) {
             var AT2 = Math.pow(fast_carbAbsTime,2);
