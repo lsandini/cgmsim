@@ -9,8 +9,8 @@ console.log(process.env.API_SGV2, process.env.API_KEY);
 
 // dates in ISO format
 const now = Date.now();
-const fiveMinAgo = now - 60000;
-const tenMinAgo = now - 120000;
+const fiveMinAgo = now - 5*60000;
+const tenMinAgo = now - 5*120000;
 console.log(now, fiveMinAgo, tenMinAgo);
 
 // dates in UNIX format 
