@@ -22,7 +22,7 @@ console.log('cosinus: ', cosinus);
 // form, being maximal at 6 AM and minimal ad 6 PM
 
 const liver = 0.1666;
-const liver_sin = liver_bgi * sinus;
+const liver_sin = liver * sinus;
 console.log('liver: ', liver);
 console.log('liver_sin: ', liver_sin);
 
