@@ -207,7 +207,11 @@ git clone https://github.com/lsandini/cgmsim.git cgmsim2
 2) Installing dependencies 
 
 
-In your linux terminal, type : __bash install_dependencies.sh__. You might see warnings during the installation and it might take a little while. Just wait for the process to complete.
+Enter the installation directory of your choice with the cd command (cd = change directory): 
+
+cd cgmsim  *or* cd cgmsim2
+
+In your linux terminal, type : __bash install_dependencies.sh__. Your password will be requires. You might see warnings during the installation and it might take a little while. Disregard them and just wait for the process to complete.
 
 3) Setting up your personal environment 
 
