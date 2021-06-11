@@ -222,11 +222,11 @@ To make a "hashed" APISECRET is to use an online Hash generator: https://passwor
 
 4) Kickstarting the simulation 
 
+Since the perlin noise generator runs automatically but only every few hours, you have to run it manually once. In your linux terminal, type : __node perlin.js__.
 
-In your linux terminal, type : __node kickstart-simulation.js__. This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
+Next, the real kickstarter, type : __node kickstart-simulation.js__. This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
 
 5) Scheduling tasks 
-
 
 In Linux, a service called __*cron*__ will execute the commands that you have specified in your settings. I added a __crontab.txt__ sample file to make the task easier. For this, in your Linux terminal, type crontab -e (and select nano or vi as your favourite text editor). Look at the sample file, and copy the lines in your own crontab.
 
