@@ -142,7 +142,7 @@ __02.04.2021__ : meals in the last six hours are now cumulated, and their fast a
 
 Limits to the SGV values have been placed at 40 mg/dl (2.2 mmol/l) and 400 mg/dl (22.2 mmol/l) in order to keep the SGV curves on the NS display when the simulator is left unattended for longer periods of time.
 
-When all data about blood glucose (BG) increasing factors (carbs and EGP), as well as BG decreasing factors (mealtime and basal insulins) are computed, their additive effect will be reflected in the sensor glucose value (sgv) uploaded to NS every 5 minutes. No predition curves are computed or displayed.
+While __get-all.sh__ gathers all the data for making the calculations, __upload-cgmsim.sh__ retrieves the latest sgv value, calls __*sgv_start.js*__ and lastly __*upload-cgmsim.js*__. When all data about blood glucose (BG) increasing factors (carbs and EGP), as well as BG decreasing factors (mealtime and basal insulins) are computed, their additive effect will be reflected in the sensor glucose value (sgv) uploaded to NS every 5 minutes. No predition curves are computed or displayed, but Nightscout's own AR2 predictions can be enabled, and I recommend a cone factor of 0, so the prediction is a line and not a cone.
 
 Adding an insulin pump
 ======================
