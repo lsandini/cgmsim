@@ -5,6 +5,8 @@ var result = require('dotenv').config();
 const api_url = process.env.API_SGV2;
 const api_key = process.env.API_KEY;
 
+console.log(process.env.API_SGV2, process.env.API_KEY);
+
 // dates in ISO format
 const now = Date.now();
 const fiveMinAgo = now - 60000;
@@ -26,7 +28,7 @@ const headers = {
     'Content-Type': 'application/json',
     'api-secret': api_key
 };
-const first_sgv = { "dateString": now, "sgv": 90, "type": "sgv", "direction": "Flat", "date": currentDate, "mills": currentDate };
+const first_sgv = { "dateString": currentDate, "sgv": 90, "type": "sgv", "direction": "Flat", "date": now, "mills": now };
 const first_sgv_json = JSON.stringify(first_sgv);
 console.log(first_sgv_json);
 
@@ -41,7 +43,7 @@ const headers1 = {
     'Content-Type': 'application/json',
     'api-secret': api_key
 };
-const fiveMin_sgv = { "dateString": fiveMinAgo, "sgv": 90, "type": "sgv", "direction": "Flat", "date": minus5Date, "mills": minus5Date };
+const fiveMin_sgv = { "dateString": minus5Date, "sgv": 90, "type": "sgv", "direction": "Flat", "date": fiveMinAgo, "mills": fiveMinAgo };
 const fiveMin_sgv_json = JSON.stringify(fiveMin_sgv);
 console.log(fiveMin_sgv_json);
 
@@ -56,7 +58,7 @@ const headers2 = {
     'Content-Type': 'application/json',
     'api-secret': api_key
 };
-const tenMin_sgv = { "dateString": tenMinAgo, "sgv": 90, "type": "sgv", "direction": "Flat", "date": minus10Date, "mills": minus10Date };
+const tenMin_sgv = { "dateString": minus10Date, "sgv": 90, "type": "sgv", "direction": "Flat", "date": tenMinAgo , "mills": tenMinAgo };
 const tenMin_sgv_json = JSON.stringify(tenMin_sgv);
 console.log(tenMin_sgv_json);
 
