@@ -2,6 +2,8 @@
 
 sudo apt install npm
 
+sudo npm install -g npm
+
 sudo apt-get install -y libcurl4-openssl-dev
 
 sudo apt-get install -y jq
