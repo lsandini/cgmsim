@@ -216,7 +216,7 @@ In your linux terminal, type : __bash install_dependencies.sh__. Your password w
 3) Setting up your personal environment 
 
 
-At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. For this, oopen the editor of your choise, I use nano. The command is __nano .env__. Look at the [__.envSAMPLE__](.main/.envSAMPLE) file included as an example. The __API_KEY__ is the hashed (or "scrambled" version of your APISECRET, the one that you set up during the NS installation. Then close the editor with CTRL + X, saving the file your just created.
+At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. For this, oopen the editor of your choise, I use nano. The command is __nano .env__. Look at the [__.envSAMPLE__](.main/.envSAMPLE) file included as an example. The __API_KEY__ is the hashed (or "scrambled" version of your APISECRET, the one that you set up during the NS installation. Then close the editor with CTRL + X, saving the file you just created.
 
 To make a "hashed" APISECRET is to use an online Hash generator: https://passwordsgenerator.net/sha1-hash-generator, enter your NS APISECRET in clear (e.g. MYAPISECRET1), select lower case hash, and generate. Copy the string into your .env file, and modify all lines adding your specific URL details.
 
