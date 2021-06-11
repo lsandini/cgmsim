@@ -211,7 +211,7 @@ Enter the installation directory of your choice with the cd command (cd = change
 
 __cd cgmsim__  *or* __cd cgmsim2__, or whatever your named your install folder.
 
-In your linux terminal, type : __bash install_dependencies.sh__. Your password will be requires. You might see warnings during the installation and it might take a little while. Disregard them and just wait for the process to complete.
+In your linux terminal, type : __bash install_dependencies.sh__. Your password will be required. You might see warnings during the installation and it might take a little while. Disregard them and just wait for the process to complete.
 
 3) Setting up your personal environment 
 
