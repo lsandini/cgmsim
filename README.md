@@ -220,10 +220,10 @@ The "environment" means the details of the simulated subject, and the Nightscout
 
 __bash install_env.sh__
 
+To verify that the .env file has been created correctly, just tyop __cat .env__ in your terminal. Finally, and since the perlin noise generator runs automatically but only every few hours, it will be launched for the first time at the end of this script.
+
 
 4) Kickstarting the simulation 
-
-Since the perlin noise generator runs automatically but only every few hours, you have to run it manually once. In your linux terminal, type : __node perlin.js__.
 
 Next, the real kickstarter, type : __node kickstart-simulation.js__. This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
 
