@@ -13,13 +13,33 @@ read -p "What is the longest absorption time for slowly absorbing meals (in minu
 CARBS_ABS_TIME=$REPLY
 echo
 
-echo "The profile of the mealtime insulin must be specified here."
-read -p "What is the peak action time (e.g. 55 min for Fiasp, 75 min for Novorapid ) ? " -r
+echo "The profile of the mealtime insulin must be specified next."
+read -p "What is the peak action time (e.g. 55 min for Fiasp, 75 min for Novorapid) ? " -r
 TP=$REPLY
 echo
 
-read -p "What is the total duration of insulin  (e.g. 55 min for Fiasp, 75 min for Novorapid ) ? " -r
-TP=$REPLY
+read -p "What is the total duration of insulin action or DIA (e.g. 5 hours for Fiasp or Novorapid) ? " -r
+DIA=$REPLY
+echo
+
+echo "The simulator needs a few details about the simulated subject."
+read -p "What is your typical ISF:   " -r
+  if [[ $REPLY =~ [0-9] ]]; then
+    ISF="$REPLY"
+    echo "Ok, $ISF units will be set as your ISF."
+  else
+    ISF=2
+    echo "Ok, your ISF will be set to 2 for now."
+  fi
+echo
+read -p "What is your typical CR (carb ratio, in g/U):   " -r
+  if [[ $REPLY =~ [0-40] ]]; then
+    CR="$REPLY"
+    echo "Ok, $CR units will be set as your ISF."
+  else
+    CR=10
+    echo "Ok, your ISF will be set to 10 for now."
+  fi
 echo
 
 echo "Now let's set up the connection to your Nightscout website."
@@ -32,24 +52,19 @@ read -p "What is your Nightscout API_SECRET (i.e. myplaintextsecret; It should b
 APISECRET=$REPLY
 echo
 
-echo "The simulator needs a few details about the simulated subject."
-read -p "What is your typical ISF:   " -r
-  if [[ $REPLY =~ [0-9] ]]; then
-    ISF="$REPLY"
-    echo "Ok, $ISF units will be set as your ISF."
-  else
-    ISF=2
-    echo "Ok, your ISF will be set to 2 for now."
-  fi
-
+echo ISF=$ISF >> test.txt
+echo CR=$CR >> test.txt
 echo WEIGHT=$WEIGHT >> test.txt
-echo CARBS_ABS_TIME=$CARBS_ABS_TIME
-
-echo NIGHTSCOUT_HOST="$NIGHTSCOUT_HOST" >> test.txt
-
-echo NIGHTSCOUT_URL="https://$NIGHTSCOUT_HOST.herokuapp.com" >> test.txt
+echo TP=$TP >> test.txt
+echo DIA=$DIA >> test.txt
+echo CARBS_ABS_TIME=$CARBS_ABS_TIME >> test.txt
+echo >> test.txt
 echo APISECRET="$APISECRET" >> test.txt
-echo ISF="$ISF" >> test.txt
+echo >> test.txt
+echo NIGHTSCOUT_URL="'https://$NIGHTSCOUT_HOST.herokuapp.com'" >> test.txt
+echo >> test.txt
+echo API_URL_TEST="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/treatments'" >> test.txt
+echo >> test.txt
 
 chmod +x ./bash2.sh
 exit
