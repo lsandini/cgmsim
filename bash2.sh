@@ -92,10 +92,9 @@ echo API_PROFILE="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/profile.json'" 
 echo >> test.txt
 echo API_SGV="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/sgv.json'" >> test.txt
 echo >> test.txt
-echo API_SGV2="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/'" >> test.txt
-echo >> test.txt
 echo API_SGV1="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/sgv.json'" >> test.txt
+echo >> test.txt
+echo API_SGV2="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/'" >> test.txt
 
-${ENDCOLOR}
 chmod +x ./bash2.sh
 exit
