@@ -216,7 +216,10 @@ In your linux terminal, type : __bash install_dependencies.sh__. Your password w
 3) Setting up your personal environment 
 
 
-At the root of the installation folder, create a file called __.env__ , it will contain your own environment variables. For this, oopen the editor of your choise, I use nano. The command is __nano .env__. Look at the [__.envSAMPLE__](.main/.envSAMPLE) file included as an example.
+The "environment" means the details of the simulated subject, and the Nightscout website URL and API secret. They are centralized and stored in the simulator's folder, in a file called __*.env*__. This file's contents are later called from various scripts. Creating this file is simplified by launching this interactive this script:
+
+__bash install_env.sh__
+
 
 4) Kickstarting the simulation 
 
