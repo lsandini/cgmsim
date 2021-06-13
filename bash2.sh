@@ -2,18 +2,21 @@
 
 touch test.txt
 rm test.txt
-
+echo
 echo "First let's gather details about the simulated subject."
+echo
 read -p "What is the weight in kg ? " -r
 WEIGHT=$REPLY
 echo
 
 echo "The absorption or carbs will be AT MOST 360 minutes (or 6 hours). You can specify a shorter duration here."
+echo
 read -p "What is the longest absorption time for slowly absorbing meals (in minutes) ? " -r
 CARBS_ABS_TIME=$REPLY
 echo
 
 echo "The profile of the mealtime insulin must be specified next."
+echo
 read -p "What is the peak action time (e.g. 55 min for Fiasp, 75 min for Novorapid) ? " -r
 TP=$REPLY
 echo
@@ -23,7 +26,8 @@ DIA=$REPLY
 echo
 
 echo "The simulator needs a few details about the simulated subject."
-read -p "What is your typical ISF:   " -r
+echo
+read -p "What is your typical ISF ? Give only one value for the whole 24h duration:   " -r
   if [[ $REPLY =~ [0-9] ]]; then
     ISF="$REPLY"
     echo "Ok, $ISF units will be set as your ISF."
@@ -32,10 +36,16 @@ read -p "What is your typical ISF:   " -r
     echo "Ok, your ISF will be set to 2 for now."
   fi
 echo
-read -p "What is your typical CR (carb ratio, in g/U):   " -r
+
+echo 
+read -p "What is your typical CR (carb ratio, in g/U). If necessary, use a dot (.) and not a comma (,) as a decimal separator:   " -r
+echo
+
+
   if [[ $REPLY =~ [0-40] ]]; then
     CR="$REPLY"
     echo "Ok, $CR units will be set as your ISF."
+    echo
   else
     CR=10
     echo "Ok, your ISF will be set to 10 for now."
