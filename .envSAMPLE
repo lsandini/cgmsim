@@ -6,13 +6,16 @@ TP=55
 
 CARBS_ABS_TIME=360
 
-API_KEY='YOUR__API_KEY_HERE'
+APISECRET=YOUR_NIGHTSCOUT_APISECRET   (without quotes !)
 
 API_URL_TEST='https://YOUR_NIGHTSCOUT.herokuapp.com/api/v1/treatments'
 
 API_URL='https://YOUR_NIGHTSCOUT.herokuapp.com/api/v1/treatments'
+
 API_PROFILE='https://YOUR_NIGHTSCOUT.herokuapp.com/api/v1/profile.json'
+
 API_SGV='https://YOUR_NIGHTSCOUT.herokuapp.com/api/v1/entries/sgv.json'
-API_SGV2='https://YOUR_NIGHTSCOUT.herokuapp.com/api/v1/entries/'
 
 API_SGV1='https://YOUR_NIGHTSCOUT.herokuapp.com/api/v1/entries/sgv.json'
+
+API_SGV2='https://YOUR_NIGHTSCOUT.herokuapp.com/api/v1/entries/'
