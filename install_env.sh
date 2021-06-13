@@ -1,7 +1,7 @@
 #!/bin/bash
 
-touch test.txt
-rm test.txt
+touch .env
+rm .env
 
 echo -e "\e[96mFirst let's gather details about the simulated subject.\e[0m "
 echo 
@@ -73,28 +73,30 @@ APISECRET=$REPLY
 echo -e "\e[92m \e[0m\e[1m\e[92m$APISECRET \e[0m\e[92m it is !\e[0m"
 echo
 
-echo ISF=$ISF >> test.txt
-echo CR=$CR >> test.txt
-echo WEIGHT=$WEIGHT >> test.txt
-echo TP=$TP >> test.txt
-echo DIA=$DIA >> test.txt
-echo CARBS_ABS_TIME=$CARBS_ABS_TIME >> test.txt
+echo ISF=$ISF >> .env
+echo CR=$CR >> .env
+echo WEIGHT=$WEIGHT >> .env
+echo TP=$TP >> .env
+echo DIA=$DIA >> .env
+echo CARBS_ABS_TIME=$CARBS_ABS_TIME >> .env
 echo >> test.txt
-echo APISECRET="$APISECRET" >> test.txt
+echo APISECRET="$APISECRET" >> .env
 echo >> test.txt
-echo NIGHTSCOUT_URL="'https://$NIGHTSCOUT_HOST.herokuapp.com'" >> test.txt
+echo NIGHTSCOUT_URL="'https://$NIGHTSCOUT_HOST.herokuapp.com'" >> .env
 echo >> test.txt
-echo API_URL_TEST="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/treatments'" >> test.txt
+echo API_URL_TEST="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/treatments'" >> .env
 echo >> test.txt
-echo API_URL="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/treatments'" >> test.txt
+echo API_URL="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/treatments'" >> .env
 echo >> test.txt
-echo API_PROFILE="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/profile.json'" >> test.txt
+echo API_PROFILE="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/profile.json'" >> .env
 echo >> test.txt
-echo API_SGV="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/sgv.json'" >> test.txt
+echo API_SGV="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/sgv.json'" >> .env
 echo >> test.txt
-echo API_SGV1="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/sgv.json'" >> test.txt
+echo API_SGV1="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/sgv.json'" >> .env
 echo >> test.txt
-echo API_SGV2="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/'" >> test.txt
+echo API_SGV2="'https://$NIGHTSCOUT_HOST.herokuapp.com/api/v1/entries/'" >> .env
 
-chmod +x ./bash2.sh
+chmod +x ./install_env.sh
+
+node perlin.js;
 exit
