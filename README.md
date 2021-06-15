@@ -105,7 +105,7 @@ __17.05.2021__ Now sinusoidal variation of liver glucose production is in testin
 
 Modeling exercise
 =================
-Exercise modeling is not part of the project yet.
+Exercise modeling is not part of the project (yet).
 
 Random effects
 ==============
