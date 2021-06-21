@@ -7,6 +7,16 @@ const api_key = process.env.API_KEY;
 
 console.log(process.env.API_SGV2, process.env.API_KEY);
 
+//let's hash the APISECRET
+const {
+  createHash,
+} = require('crypto');
+const hash = createHash('sha1');
+hash.update(process.env.APISECRET);
+//console.log(hash.digest('hex'));
+const hash_secret = hash.digest('hex');
+console.log('this is the hashed secret:', hash_secret);
+
 // dates in ISO format
 const now = Date.now();
 const fiveMinAgo = now - 5*60000;
@@ -26,7 +36,7 @@ console.log(currentDate, minus5Date, minus10Date);
 const url = api_url;
 const headers = {
     'Content-Type': 'application/json',
-    'api-secret': api_key
+    'api-secret': hash_secret
 };
 const first_sgv = { "dateString": currentDate, "sgv": 90, "type": "sgv", "direction": "Flat", "date": now, "mills": now };
 const first_sgv_json = JSON.stringify(first_sgv);
@@ -41,7 +51,7 @@ fetch(url, {
 
 const headers1 = {
     'Content-Type': 'application/json',
-    'api-secret': api_key
+    'api-secret': hash_secret
 };
 const fiveMin_sgv = { "dateString": minus5Date, "sgv": 90, "type": "sgv", "direction": "Flat", "date": fiveMinAgo, "mills": fiveMinAgo };
 const fiveMin_sgv_json = JSON.stringify(fiveMin_sgv);
@@ -56,7 +66,7 @@ fetch(url, {
 
 const headers2 = {
     'Content-Type': 'application/json',
-    'api-secret': api_key
+    'api-secret': hash_secret
 };
 const tenMin_sgv = { "dateString": minus10Date, "sgv": 90, "type": "sgv", "direction": "Flat", "date": tenMinAgo , "mills": tenMinAgo };
 const tenMin_sgv_json = JSON.stringify(tenMin_sgv);
