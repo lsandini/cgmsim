@@ -241,3 +241,8 @@ It may take a few minutes until you get a second reading, after which a new valu
 
 
 Make sure to report any bugs, suggest improvements, and spread the project. There is a lot to be done and the code will look awful to most NodeJS programmers  :D
+
+TO DO list
+==========
+- set minimal carb amount/day, and add "suprise meal" when carb amount not reached
+- finalize installation routine with crontab creation, in one script
