@@ -244,5 +244,11 @@ Make sure to report any bugs, suggest improvements, and spread the project. Ther
 
 TO DO list
 ==========
-- set minimal carb amount/day, and add "suprise meal" when carb amount not reached
+- set minimal carb amount/day, and add "suprise meal" when carb amount not reached by 11 PM
+- 
 - finalize installation routine with crontab creation, in one script
+- 
+- add exercise & alcohol
+- 
+- add automatic "blind" detection of ISF based on CGM delta values when no there is no mealtime IOB and/or COB. Plot and compare to long acting agonist activity curves to find optimal long-acting agonist. Later apply analysis to real __DM2__ patient CGM curves
+
