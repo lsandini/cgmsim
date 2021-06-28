@@ -55,7 +55,7 @@ var surprise = {
     time : Date.now(), 
     dateString : moment(date).toISOString(),
     carbs : (200 - totalCarbs).toString(),
-    enteredBy: 'susprise_Meal_Generator',
+    enteredBy: 'surprise_Meal_Generator',
     secret: hash_secret
     } 
 };
