@@ -116,7 +116,9 @@ Every five minutes, as the next SGV value is computed, the latest perlin noise v
 
 Mechanics of the simulator
 ==========================
-I run the software on a Ubuntu 20.04 virtual machine (a droplet on Digital Ocean, but any physical or virtual computer will do). So it is a realtime bot collecting insulin and food entries from Nightscout, and uploading sensor glucose values (SGV) data back to Nightscout. The CGMSIM user doesn't have to use any other software or hardware, only a working Nightscout website with the Careportal plugin installed.
+I run the software on a Ubuntu 20.04 virtual machine (a droplet on Digital Ocean), but any physical or virtual computer will do. Recently I added more simulated patients, and in order to reduce cloud-ased VM costs, I am running about 10 simulations in parallel on a Raspberry Pi 3B. 
+
+So the application is a realtime bot collecting insulin and food entries from Nightscout, and uploading sensor glucose values (SGV) data back to Nightscout. The CGMSIM user doesn't have to use any other software or hardware, only a working Nightscout website with the Careportal plugin installed is required..
 
 Inputs for every category (virtual mealtime insulins, virtual meals) are declared using Careportal. Long acting or "basal" insulin agonists must be declared as "announcements", and in the text field the correct insulin product and dose are to be declared using the following format: "detemir 15" or "glargin 26" (without quotes).
 
