@@ -42,7 +42,7 @@ console.log('these are the last meals: ',lastMeals24);
 
 const dataMeals24 = JSON.stringify(lastMeals24, null, 4);
 
-fs.writeFile('./files/last_meals24.json', dataMeals, (err) => {
+fs.writeFile('./files/last_meals24.json', dataMeals24, (err) => {
     if (err) {
         throw err;
     }
