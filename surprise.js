@@ -1,4 +1,4 @@
-var food = require('./files/last_meals.json');
+var food = require('./files/last_meals24.json');
 const dotenv = require('dotenv');
 var result = require('dotenv').config();
 var moment = require('moment');
