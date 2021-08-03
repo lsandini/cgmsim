@@ -20,7 +20,7 @@ timeSinceMealMin = meals.map(entry => ({ ...entry, mills: entry.time, time: (Dat
 console.log('this is the trimmed down meals and time since last meal:',timeSinceMealMin);
 
 let lastMeals = timeSinceMealMin.filter(function (e) {
-    return e.time <= 360; // keep only the meals from the last 6 hours or 360 min
+    return e.time <= 1440; // keep only the meals from the last 24 hours or 1440 min
 });
 console.log('these are the last meals: ',lastMeals);
 
