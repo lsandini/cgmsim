@@ -108,7 +108,7 @@ __17.05.2021__ Now sinusoidal variation of liver glucose production is in testin
 
 Modeling exercise
 =================
-Exercise modeling is not part of the project (yet).
+__04.08.2021__ I just found a way to import Apple Healthkit data from my iPhone my simulator in JSON form. Exercise modeling is not part of the project (yet), but I might use heart rate or cumulative step data when computing CGM values in the future. Something similar from Android wearables or Fitbit wristbands would be cool too.
 
 Random effects
 ==============
