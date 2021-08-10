@@ -1,5 +1,3 @@
-CGM trace generator, MDI only  or CSII (version 2.0)  
-===================================================
 Table of Contents
 =================
 
@@ -17,7 +15,11 @@ Table of Contents
 * [NEW feature (random meals + autobolusing - TEST PHASE)](#new-feature-random-meals--autobolusing---test-phase)
 * [Installation](#installation)
 * [TO DO list](#to-do-list)
-* 
+
+
+CGM trace generator, MDI only  or CSII (version 2.0)  
+===================================================
+
 ![Animation2](https://user-images.githubusercontent.com/18611419/123732515-b05b3100-d8a2-11eb-9a07-fc8dfa41df8f.gif)
 
 This application is simulating in an extremely basic way the effects food and various insulin analogs on continuous glucose monitor (CGM) curve in type 1 diabetes (T1D). It uses Nightscout (NS) as an input and visualization method.
