@@ -1,6 +1,23 @@
 CGM trace generator, MDI only  or CSII (version 2.0)  
 ===================================================
+Table of Contents
+=================
 
+* [CGM trace generator, MDI only  or CSII (version 2.0)](#cgm-trace-generator-mdi-only--or-csii-version-20)
+* [Modeling the activity of mealtime insulins](#modeling-the-activity-of-mealtime-insulins)
+* [Modeling the activities of the long-acting agonists](#modeling-the-activities-of-the-long-acting-agonists)
+* [Modeling Levemir (Levemir®)](#modeling-levemir-levemir)
+* [Modeling Glargine (Lantus®, Abasaglar®, Toujeo®)](#modeling-glargine-lantus-abasaglar-toujeo)
+* [Modeling the absorption of Carbs from the gut](#modeling-the-absorption-of-carbs-from-the-gut)
+* [Modeling the Endogenous Glucose Production (EGP) by the liver](#modeling-the-endogenous-glucose-production-egp-by-the-liver)
+* [Modeling exercise](#modeling-exercise)
+* [Random effects](#random-effects)
+* [Mechanics of the simulator](#mechanics-of-the-simulator)
+* [Adding an insulin pump](#adding-an-insulin-pump)
+* [NEW feature (random meals + autobolusing - TEST PHASE)](#new-feature-random-meals--autobolusing---test-phase)
+* [Installation](#installation)
+* [TO DO list](#to-do-list)
+* 
 ![Animation2](https://user-images.githubusercontent.com/18611419/123732515-b05b3100-d8a2-11eb-9a07-fc8dfa41df8f.gif)
 
 This application is simulating in an extremely basic way the effects food and various insulin analogs on continuous glucose monitor (CGM) curve in type 1 diabetes (T1D). It uses Nightscout (NS) as an input and visualization method.
