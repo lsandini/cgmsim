@@ -167,14 +167,14 @@ Limits to the SGV values have been placed at 40 mg/dl (2.2 mmol/l) and 400 mg/dl
 
 While __get-all.sh__ gathers all the data for making the calculations, __upload-cgmsim.sh__ retrieves the latest sgv value, calls __*sgv_start.js*__ and lastly __*upload-cgmsim.js*__. When all data about blood glucose (BG) increasing factors (carbs and EGP), as well as BG decreasing factors (mealtime and basal insulins) are computed, their additive effect will be reflected in the sensor glucose value (sgv) uploaded to NS every 5 minutes. No predition curves are computed or displayed, but Nightscout's own AR2 predictions can be enabled, and I recommend a cone factor of 0, so the prediction is a line and not a cone.
 
-Adding an insulin pump
-======================
+Adding an insulin pump +/- a DIY artificial pancreas
+====================================================
 
 __11.04.2021__ : insulin pump treatment (or continuous subcutaneous insulin infusion (CSII) treatment) is now made possible. The bash script __*get-pump.sh*__ retrieves and writes the __*pump_treatments.json*__  and __*profile.json*__  from NS. It then calls __*pump.js*__, where both json files are filtered for data. The pump basal profiles are either the <ins>default profile</ins> created in NS on first launch, the <ins>Autosync'ed profile</ins> sent daily from openAPS. All other treatment modalities (microboluses, Temporary Basal Rates) are taken from the __*pump_treatments.json*__ file. 
 
 The bash script is run every 5 minutes, and __*pump.js*__ looks for an ongoing Temporary Basal rate. If none is set, it then looks for the latest AutoSync'ed basal rate, and if non is set, it will use the Default Basal Rate. The current basal rate is turned into a 5 minute insulin amount, which is added to an array called __*basalAsBoluses.json*__. This array contains the 5-minute entries from the previous DIA hours. The activity of each 5 minutes basal entry is computed and added, creating the pumpBasalAct valiable, saved as __*pumpBasalAct.json*__.
 
-This activity of basals as boluses is added to the other insulin activities in __*sgv_start.js*__, where the total insulin activity is computed, before being transformed into BGI.
+This activity of basals as boluses is added to the other insulin activities in __*sgv_start.js*__, where the total insulin activity is computed, before being transformed into BGI. From now on you can couple the simulator to a DIY artificial pancreas. Yay :)
 
 NEW feature (random meals + autobolusing - TEST PHASE)
 =====================
