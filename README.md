@@ -3,7 +3,6 @@ CGM trace generator, MDI only  or CSII (version 2.0)
 
 ![Animation2](https://user-images.githubusercontent.com/18611419/123732515-b05b3100-d8a2-11eb-9a07-fc8dfa41df8f.gif)
 
-#Introduction
 This application is simulating in an extremely basic way the effects food and various insulin analogs on continuous glucose monitor (CGM) curve in type 1 diabetes (T1D). It uses Nightscout (NS) as an input and visualization method.
 
 Since even accurate physiological simulators can at best provide only an approximation of what happens in a biological organism, the goal is not even to try to match reality, but to provide a tool helping to visualize the fluctuations of glucose sensor values in response to various insulin analogs and food. 
