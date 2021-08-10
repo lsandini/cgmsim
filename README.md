@@ -11,7 +11,7 @@ Table of Contents
 * [Modeling exercise](#modeling-exercise)
 * [Random effects](#random-effects)
 * [Mechanics of the simulator](#mechanics-of-the-simulator)
-* [Adding an insulin pump AAAA](#adding-an-insulin-pump)
+* [Adding an insulin pump +/- a DIY artificial pancreas](#Adding-an-insulin-pump-+/--a-DIY-artificial-pancreas)
 * [NEW feature (random meals + autobolusing - TEST PHASE)](#new-feature-random-meals--autobolusing---test-phase)
 * [Installation](#installation)
 * [TO DO list](#to-do-list)
