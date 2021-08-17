@@ -244,7 +244,7 @@ The "environment" means the details of the simulated subject, and the Nightscout
 
 __bash install_env.sh__
 
-To verify that the .env file has been created correctly, just tyop __cat .env__ in your terminal. Finally, and since the perlin noise generator runs automatically but only every few hours, it will be launched for the first time at the end of this script.
+To verify that the .env file has been created correctly, just type __cat .env__ in your terminal. Finally, and since the perlin noise generator runs automatically but only every few hours, it will be launched for the first time at the end of this script.
 
 
 4) Kickstarting the simulation 
