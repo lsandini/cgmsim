@@ -16,8 +16,8 @@ function listen() {
 
 
 // this is the API to accept JSON files
-app.use(express.json());
 
+app.use(express.json({limit: '2mb'}));
 app.post('/', function(request, response){
   console.log(request.body);      // your JSON
    response.send(request.body);
