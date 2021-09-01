@@ -18,7 +18,7 @@ console.log('cosinus: ', cosinus);
 // 2 mmol/l/h / (60min*60sec*1000) = 2/3'600'000 mmol/l/ms
 // 1 mmol/l/h /12 = bgi every 5 minutes or 1,66666 mmol/l/5min
 
-// by multiplying the liver_bgi by the sin function, the liver loog glucose production varies in a sinusoidal 
+// by multiplying the liver_bgi by the sin function, the liver glucose production varies in a sinusoidal 
 // form, being maximal at 6 AM and minimal ad 6 PM
 
 const liver = 0.1666;
