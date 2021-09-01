@@ -15,8 +15,7 @@ console.log('cosinus: ', cosinus);
 // => the the CF (carb factor) is 2 mmol/l/10g
 // so the BG increases 2 mmol/l/h, (every time 10g of carbs are delivered)
 
-// 2 mmol/l/h / (60min*60sec*1000) = 2/3'600'000 mmol/l/ms
-// 1 mmol/l/h /12 = bgi every 5 minutes or 1,66666 mmol/l/5min
+// 2 mmol/l/h /12 => bgi every 5 minutes or 0,166666 mmol/l/5min
 
 // by multiplying the liver_bgi by the sin function, the liver glucose production varies in a sinusoidal 
 // form, being maximal at 6 AM and minimal ad 6 PM
@@ -25,8 +24,6 @@ const liver = 0.1666;
 const liver_sin = liver * sinus;
 console.log('liver: ', liver);
 console.log('liver_sin: ', liver_sin);
-
-// var liver_bgi = 0.0833 * sinus;
 
 let liverString = JSON.stringify(liver_sin);
 const fs = require('fs');
