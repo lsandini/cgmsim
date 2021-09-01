@@ -9,7 +9,7 @@ console.log('sinus: ', sinus);
 console.log('cosinus: ', cosinus);
 
 
-// let's simulate the carb inpact of the liver, producing 10g of carbs / hour
+// let's simulate the carb impact of the liver, producing 10g of carbs / hour
 // if the ISF is 2 mmol/l/U,
 // and the CR is 10g/U,
 // => the the CF (carb factor) is 2 mmol/l/10g
