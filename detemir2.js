@@ -8,6 +8,7 @@ const detemirs = require('./files/last_detemir.json');
 var jsondet = JSON.stringify(detemirs);
 var detemir_data = JSON.parseWithDate(jsondet);
 console.log(detemir_data);
+var moment = require('moment'); 
 
 // activities be expressed as U/min !!!
 let timeSinceDetemirAct = detemir_data.map(entry => {
