@@ -71,6 +71,7 @@ So for 0.1 U/kg, the duration of action is 16+(20 * 0.1) = 18 hours, and for 0.4
 And the model itself is:
 y= units * (Math.PI/(duration * 2)) * (Math.sin(time * Math.PI/duration));
 
+(for the biexponential model in detemir2.js, the duration of activity = (14 + (24 * dose/weight)), and the peak is duration/3.
 
 Modeling Glargine (Lantus®, Abasaglar®, Toujeo®)
 ================================================
@@ -98,6 +99,7 @@ bb = Math.pow(b,2);
 
 y = 2 * Math.sqrt(bb * (1+z)); // where y is the activity of glargine over time
 
+(for the biexponential model in glargine2.js, the duration of activity = (22 + (12 * dose/weight)), and the peak is duration/2.5 .
 
 Here is a visual aid illustrating the differences between the activity curves of detemir and glargine at different doses:
  
