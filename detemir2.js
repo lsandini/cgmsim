@@ -17,7 +17,7 @@ let timeSinceDetemirAct = detemir_data.map(entry => {
     var peak = (duration/3);
     var tp = peak;
     var td = duration;
-
+    var t = (Date.now() - moment(entry.time).valueOf())/(1000*60*60);
     var tau = tp * (1 - tp / td) / (1 - 2 * tp / td);
     var a = 2 * tau / td;
     var S = 1 / (1 - a + (1 + a) * Math.exp(-td / tau));
