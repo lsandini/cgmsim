@@ -106,12 +106,21 @@ Here is a visual aid illustrating the differences between the activity curves of
 ![image](https://user-images.githubusercontent.com/18611419/109794249-5745fe00-7c1e-11eb-9d94-839c4a34d706.png)
 
 
-Switching to biexponential models
+Switching to biexponential models 
 =================================
-While the very basic mathematical models of long acting insulin analogs are good enough for training, getting closer to published "curves" and physiological activity is necessary. I decided to adapt the biexponential model used for mealtimes insulins.
+__30.09.2021__ While the very basic mathematical models of long acting insulin analogs are good enough for training, getting closer to published "curves" and physiological activity is necessary. I decided to adapt the biexponential model used for mealtimes insulins.
 
+The activity of detemir and glargine-U100 depend on the absolute dose, but also on the dose in relation to the patient's weight. Also, the peak of action is achieved at different timepoints. The DIA of detemir is more variable and dose dependent than that of glargine:
 
+For detemir, the duration of action is 14h + (24* dose/weight), and the peak is at duration/3.
 
+For glargine U100, the duration of action is 22h + (12* dose/weight), and the peak is at duration/2.5.
+
+![models 3](https://user-images.githubusercontent.com/18611419/135437260-89bf584b-e412-41d9-bcba-026e6b27d3cc.jpg)
+
+![nature](https://user-images.githubusercontent.com/18611419/135437277-8fe8c4d8-9bea-4466-8820-1240de922e2c.jpg)
+
+Notice that the curve colours are different, and some of the activity curves seem to derived from steady-state euglycemic clamps.
 
 
 Modeling the absorption of Carbs from the gut
