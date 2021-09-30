@@ -106,6 +106,14 @@ Here is a visual aid illustrating the differences between the activity curves of
 ![image](https://user-images.githubusercontent.com/18611419/109794249-5745fe00-7c1e-11eb-9d94-839c4a34d706.png)
 
 
+Switching to biexponential models
+=================================
+While the very basic mathematical models of long acting insulin analogs are good enough for training, getting closer to published "curves" and physiological activity is necessary. I decided to adapt the biexponential model used for mealtimes insulins.
+
+
+
+
+
 Modeling the absorption of Carbs from the gut
 =============================================
 
