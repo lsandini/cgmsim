@@ -57,3 +57,49 @@ fs.writeFile('./files/last_detemir_aggrACT.json', DetAct, (err) => {
     }
     console.log("aggregated DET activity is now is saved as JSON.");
   });
+
+
+
+// LET'S UPLOAD STUFF TO DMPKL7
+//===============================
+var today = new Date();
+var detDisplay = {"dateString" : today, "sgv" : Math.floor(resultDetAct * 1000 * 18), "type" : "sgv", "direction":"Flat", "date" : Date.now(),
+};
+var detDisplayString = JSON.stringify(detDisplay);
+
+console.log('detDisplayString:',detDisplayString);
+
+fs.writeFile("./files/detDisplayString.json", detDisplayString, function(err, result) {
+if(err) console.log('error', err);
+});
+
+const fetch = require('node-fetch');
+const crypto = require('crypto');
+
+
+//let's build the API_secret for the headers and the API_url for the fetch() function
+//===================================================================================
+const api_url = "https://dmpkl7.herokuapp.com/api/v1/entries/"
+;
+
+const hash = crypto.createHash('sha1');
+hash.update(process.env.APISECRET);
+const hashed_secret = hash.digest('hex');
+
+// now the fetch function itself
+//==============================
+const headers = {
+    'Content-Type': 'application/json',
+    'api-secret': hashed_secret
+};
+
+const body = detDisplayString;
+
+//console.log(body_json);
+
+fetch(api_url, {
+    method: 'POST',
+    headers: headers,
+    body: body,
+});
+
