@@ -5,6 +5,7 @@ const { pi } = require("mathjs");
 
 const dotenv = require('dotenv');
 var result = require('dotenv').config();
+const weight = parseInt(process.env.WEIGHT);
 
 const glargines = require('./files/last_glargine.json');
 var jsongla = JSON.stringify(glargines);
