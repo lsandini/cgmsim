@@ -27,7 +27,7 @@ let timeSinceGlargineAct = glargine_data.map(entry => {
     var S = 1 / (1 - a + (1 + a) * Math.exp(-td / tau));
 
     var glargineActivity = 0;
-    return { ...entry, time: time, glargineActivity:  (dose * (S / Math.pow(tau, 2)) * t * (1 - t / td) * Math.exp(-t / tau)) / 60 };
+    return { ...entry, time: time, glargineActivity:  (dose * (S / Math.pow(tau, 2)) * time * (1 - time / td) * Math.exp(-time / tau)) / 60 };
 
 });
 console.log('the is the accumulated glargine activity:', timeSinceGlargineAct);
