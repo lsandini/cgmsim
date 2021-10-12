@@ -1,12 +1,12 @@
-require('json.date-extensions');
-JSON.useDateParser();
-var resultGlaAct =0;
-const { pi } = require("mathjs");
-
 const dotenv = require('dotenv');
 var result = require('dotenv').config();
-const weight = parseInt(process.env.WEIGHT);
+require('json.date-extensions');
+JSON.useDateParser();
+var resultGlaAct = 0;
+const { pi } = require("mathjs");
 
+const weight = parseInt(process.env.WEIGHT);
+var moment = require('moment');
 const glargines = require('./files/last_glargine.json');
 var jsongla = JSON.stringify(glargines);
 var glargine_data = JSON.parseWithDate(jsongla);
@@ -27,8 +27,9 @@ let timeSinceGlargineAct = glargine_data.map(entry => {
     var S = 1 / (1 - a + (1 + a) * Math.exp(-td / tau));
 
     var glargineActivity = 0;
-    return { ...entry, time: time, glargineActivity:  (dose * (S / Math.pow(tau, 2)) * time * (1 - time / td) * Math.exp(-time / tau)) / 60 };
-
+    return { ...entry,
+         time: time,
+         glargineActivity:  (dose * (S / Math.pow(tau, 2)) * time * (1 - time / td) * Math.exp(-time / tau)) / 60 };
 });
 console.log('the is the accumulated glargine activity:', timeSinceGlargineAct);
 
@@ -39,7 +40,7 @@ let lastGlargines = timeSinceGlargineAct.filter(function (e) {
 });
 console.log('these are the last glargines and activities:',lastGlargines);
 
-var resultGlaAct = lastGlargines.reduce(function(tot, arr) { 
+var resultGlaAct = lastGlargines.reduce(function(tot, arr) {
     return tot + arr.glargineActivity;
   },0);
 
