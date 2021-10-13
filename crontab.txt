@@ -7,7 +7,15 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 #30 23 * * * cd /home/MYUSERNAME/cgmsim && /bin/bash surprise.sh
 
 
-# If you want to use the pump simulation enable these lines
-# */5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash /root/get-pump.sh
-# 0 21 * * * cd /home/MYUSERNAME/cgmsim &&/bin/bash /root/random_meal.sh
+# If you want to use the PUMP simulation enable this block of 5 lines
+# instead of the 4 -line block above !
+===================================================================
+*/5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash get-pump.sh
+0 */6 * * * cd /home/MYUSERNAME/cgmsim && /bin/bash perlin.sh
+*/5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash get-all.sh
+*/5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash upload-cgmsim-pump.sh
+#30 23 * * * cd /home/MYUSERNAME/cgmsim && /bin/bash surprise.sh
 
+# Want to add random meals in PUMP mode, add this line
+======================================================
+0 21 * * * cd /home/MYUSERNAME/cgmsim &&/bin/bash random_meal.sh
