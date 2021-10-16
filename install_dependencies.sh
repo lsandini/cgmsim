@@ -16,7 +16,7 @@ sudo apt-get install -y jq
 
 npm install dotenv
 
-npm install node-fetch
+npm i node-fetch@2.6.5
 
 npm install mathjs
 
