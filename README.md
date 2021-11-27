@@ -16,6 +16,7 @@ Table of Contents
 - [Adding an insulin pump +/- a DIY artificial pancreas](#adding-an-insulin-pump---a-diy-artificial-pancreas)
 - [NEW feature (random meals + autobolusing - TEST PHASE)](#new-feature-random-meals--autobolusing---test-phase)
 - [Installation](#installation)
+  - [1) Downloading the simulator](#1-downloading-the-simulator)
 - [TO DO list](#to-do-list)
 
 
@@ -235,7 +236,7 @@ The next steps involve:
 - kickstarting the simulator
 - scheduling the tasks
 
-1) Downloading the simulator 
+## 1) Downloading the simulator 
 
 
 Log into your Ubuntu terminal, and then run this command :
