@@ -17,7 +17,7 @@ async function fetchText() {
   let response = await fetch("https://astro6.herokuapp.com/", requestOptions);
   let data = await response.json();
   const dataJSON = JSON.stringify(data, null, 4);
-  await writeFile("./data-local.json", dataJSON);
+  await writeFile("./files/data-local.json", dataJSON);
   console.log(data);
 }
 fetchText();
