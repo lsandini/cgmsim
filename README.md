@@ -245,9 +245,9 @@ git clone https://github.com/lsandini/cgmsim.git
 That's it. A folder called cgmsim has been made for you and all the needed files are in there.
 
 If you'd like to run more simulators on the same machine, just run:
-
+```
 git clone https://github.com/lsandini/cgmsim.git cgmsim2
-
+```
 ... and a separate folder called "cgmsim2" is made, identical to "cgmsim" 
  
 
@@ -256,7 +256,10 @@ git clone https://github.com/lsandini/cgmsim.git cgmsim2
 
 Enter the installation directory of your choice with the cd command (cd = change directory): 
 
-__cd cgmsim__  *or* __cd cgmsim2__, or whatever your named your install folder.
+```
+cd cgmsim
+```  
+... *or* __cd cgmsim2__, or whatever your named your install folder.
 
 Update your version of NodeJS, the Javascript runtime or "engine", that reads and executes the javascript files included in this simulator. Type this in your terminal:
 
@@ -266,21 +269,35 @@ curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 ```
 
-In your linux terminal, type : __bash install_dependencies.sh__. Your password will be required. You might see warnings during the installation and it might take a little while. Disregard them and just wait for the process to complete.
+In your linux terminal, type : 
+```
+bash install_dependencies.sh
+```
+Your password will be required. You might see warnings during the installation and it might take a little while. Disregard them and just wait for the process to complete.
 
 3) Setting up your personal environment 
 
-
 The "environment" means the details of the simulated subject, and the Nightscout website URL and API secret. They are centralized and stored in the simulator's folder, in a file called __*.env*__. This file's contents are later called from various scripts. Creating this file is simplified by launching this interactive this script:
+```
+bash install_env.sh
+```
 
-__bash install_env.sh__
 
-To verify that the .env file has been created correctly, just type __cat .env__ in your terminal. Finally, and since the perlin noise generator runs automatically but only every few hours, it will be launched for the first time at the end of this script.
+To verify that the .env file has been created correctly, just type 
+```
+cat .env
+``` 
+in your terminal. Finally, and since the perlin noise generator runs automatically but only every few hours, it will be launched for the first time at the end of this script.
 
 
 4) Kickstarting the simulation 
 
-Next, the real kickstarter, type : __node kickstart-simulation.js__. This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
+Next, the real kickstarter, type : 
+```
+node kickstart-simulation.js
+```
+
+This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
 
 5) Scheduling tasks 
 
