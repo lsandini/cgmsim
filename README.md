@@ -1,21 +1,22 @@
 Table of Contents
 =================
 
-* [Table of Contents](#table-of-contents)
-* [CGM trace generator, MDI only  or CSII (version 2.0)](#cgm-trace-generator-mdi-only--or-csii-version-20)
-* [Modeling the activity of mealtime insulins](#modeling-the-activity-of-mealtime-insulins)
-* [Modeling the activities of the long-acting agonists](#modeling-the-activities-of-the-long-acting-agonists)
-* [Modeling Levemir (Levemir®)](#modeling-levemir-levemir)
-* [Modeling Glargine (Lantus®, Abasaglar®, Toujeo®)](#modeling-glargine-lantus-abasaglar-toujeo)
-* [Modeling the absorption of Carbs from the gut](#modeling-the-absorption-of-carbs-from-the-gut)
-* [Modeling the Endogenous Glucose Production (EGP) by the liver](#modeling-the-endogenous-glucose-production-egp-by-the-liver)
-* [Modeling exercise](#modeling-exercise)
-* [Random effects](#random-effects)
-* [Mechanics of the simulator](#mechanics-of-the-simulator)
-* [Adding an insulin pump +/- a DIY artificial pancreas](#adding-an-insulin-pump---a-diy-artificial-pancreas)
-* [NEW feature (random meals + autobolusing - TEST PHASE)](#new-feature-random-meals--autobolusing---test-phase)
-* [Installation](#installation)
-* [TO DO list](#to-do-list)
+- [Table of Contents](#table-of-contents)
+- [CGM trace generator, MDI only  or CSII (version 2.0)](#cgm-trace-generator-mdi-only--or-csii-version-20)
+- [Modeling the activity of mealtime insulins](#modeling-the-activity-of-mealtime-insulins)
+- [Modeling the activities of the long-acting agonists](#modeling-the-activities-of-the-long-acting-agonists)
+- [Modeling Levemir (Levemir®)](#modeling-levemir-levemir)
+- [Modeling Glargine (Lantus®, Abasaglar®, Toujeo®)](#modeling-glargine-lantus-abasaglar-toujeo)
+- [Switching to biexponential models](#switching-to-biexponential-models)
+- [Modeling the absorption of Carbs from the gut](#modeling-the-absorption-of-carbs-from-the-gut)
+- [Modeling the Endogenous Glucose Production (EGP) by the liver](#modeling-the-endogenous-glucose-production-egp-by-the-liver)
+- [Modeling exercise](#modeling-exercise)
+- [Random effects](#random-effects)
+- [Mechanics of the simulator](#mechanics-of-the-simulator)
+- [Adding an insulin pump +/- a DIY artificial pancreas](#adding-an-insulin-pump---a-diy-artificial-pancreas)
+- [NEW feature (random meals + autobolusing - TEST PHASE)](#new-feature-random-meals--autobolusing---test-phase)
+- [Installation](#installation)
+- [TO DO list](#to-do-list)
 
 
 CGM trace generator, MDI only  or CSII (version 2.0)  
@@ -256,6 +257,14 @@ git clone https://github.com/lsandini/cgmsim.git cgmsim2
 Enter the installation directory of your choice with the cd command (cd = change directory): 
 
 __cd cgmsim__  *or* __cd cgmsim2__, or whatever your named your install folder.
+
+Update your version of NodeJS, the Javascript runtime or "engine", that reads and executes the javascript files included in this simulator. Type this in your terminal:
+
+```
+curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh  
+
+sudo bash nodesource_setup.sh
+```
 
 In your linux terminal, type : __bash install_dependencies.sh__. Your password will be required. You might see warnings during the installation and it might take a little while. Disregard them and just wait for the process to complete.
 
