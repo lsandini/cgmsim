@@ -17,6 +17,10 @@ Table of Contents
 - [NEW feature (random meals + autobolusing - TEST PHASE)](#new-feature-random-meals--autobolusing---test-phase)
 - [Installation](#installation)
   - [1) Downloading the simulator](#1-downloading-the-simulator)
+  - [2) Installing dependencies](#2-installing-dependencies)
+  - [3) Setting up your personal environment](#3-setting-up-your-personal-environment)
+  - [4) Kickstarting the simulation](#4-kickstarting-the-simulation)
+  - [5) Scheduling tasks](#5-scheduling-tasks)
 - [TO DO list](#to-do-list)
 
 
@@ -252,7 +256,7 @@ git clone https://github.com/lsandini/cgmsim.git cgmsim2
 ... and a separate folder called "cgmsim2" is made, identical to "cgmsim" 
  
 
-2) Installing dependencies 
+## 2) Installing dependencies 
 
 
 Enter the installation directory of your choice with the cd command (cd = change directory): 
@@ -276,13 +280,12 @@ bash install_dependencies.sh
 ```
 Your password will be required. You might see warnings during the installation and it might take a little while. Disregard them and just wait for the process to complete.
 
-3) Setting up your personal environment 
+## 3) Setting up your personal environment 
 
 The "environment" means the details of the simulated subject, and the Nightscout website URL and API secret. They are centralized and stored in the simulator's folder, in a file called __*.env*__. This file's contents are later called from various scripts. Creating this file is simplified by launching this interactive this script:
 ```
 bash install_env.sh
 ```
-
 
 To verify that the .env file has been created correctly, just type 
 ```
@@ -291,7 +294,7 @@ cat .env
 in your terminal. Finally, and since the perlin noise generator runs automatically but only every few hours, it will be launched for the first time at the end of this script.
 
 
-4) Kickstarting the simulation 
+## 4) Kickstarting the simulation 
 
 Next, the real kickstarter, type : 
 ```
@@ -300,7 +303,7 @@ node kickstart-simulation.js
 
 This will create the first 3 CGM values of 90 mg/dl or 5 mmol/l, that should get uploaded immediately to your NS website.
 
-5) Scheduling tasks 
+## 5) Scheduling tasks 
 
 In Linux, a service called __*cron*__ will execute the commands that you have specified in your settings. I added a __crontab.txt__ sample file to make the task easier. For this, in your Linux terminal, type crontab -e (and select nano or vi as your favourite text editor). Look at the sample file, and copy the lines in your own crontab.
 
