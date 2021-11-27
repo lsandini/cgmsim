@@ -1,23 +1,34 @@
 {
-  "name": "cgmsim-2",
+  "name": "cgmsim",
   "version": "1.0.0",
-  "description": "CGM trace generator, simulation of Multiple Daily Insulin Injections or Continuous Subcutaneous Insulin Infusion",
+  "description": "CGM trace generator, type 1 diabetes simulation",
   "main": "all_meals.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lsandini/cgmsim-2.git"
+    "url": "git+https://github.com/lsandini/cgmsim.git"
   },
   "keywords": [
     "simulation",
-    "diabetes"
+    "diabetes",
+    "insulin"
   ],
   "author": "Lorenzo Sandini",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lsandini/cgmsim-2/issues"
+    "url": "https://github.com/lsandini/cgmsim/issues"
   },
-  "homepage": "https://github.com/lsandini/cgmsim-2#readme"
+  "homepage": "https://github.com/lsandini/cgmsim#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "dotenv": "^9.0.2",
+    "json.date-extensions": "^1.2.2",
+    "mathjs": "^9.5.1",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.5",
+    "node-libcurl": "^2.3.3",
+    "perlin-noise": "^0.0.1"
+  }
 }
