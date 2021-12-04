@@ -88,6 +88,15 @@ console.log('this is the last perlin noise value:', lastPerls[0].noise);
 // END OF PERLIN NOISE SECTION
 
 
+// START OF PLANETS SECTION 
+const planets = require('./files/forceVectors.json');
+ // the traction of planets is about 0.0015 (Newtons) ;
+let planetFactor = 1 + planets.tractionSubject;
+ // the illumination fraction if the moon varies from 0 to 1 ;
+let moonFactor = moon_illumination_fraction / 10;
+
+// END OF PLANETS SECTION 
+
 
 
 //WITH PUMP
