@@ -123,10 +123,12 @@ console.log('x_p exponential:', x_p.toExponential(), 'y_p exponential:', y_p.toE
 let globalVectorLong_p = Math.atan(y_p/x_p) * 180 / Math.PI;
 let globalVectorForce_p = Math.sqrt((x_p**2) + (y_p**2));
 let globalVectorLong_p_SD = math.std(myData.mercuryg.lon,myData.venusg.lon,myData.marsg.lon, myData.jupiterg.lon,myData.saturng.lon,myData.neptuneg.lon);
+let globalVectorLong_p_SDnorm = globalVectorLong_p_SD/360;
 
 console.log('global vector longitude_p:', globalVectorLong_p, 'degrees');
 console.log('global vector force_p:', globalVectorForce_p, 'Newtons');
-console.log('global vector longitude_p SD:', globalVectorLong_p_SD, 'degrees');
+// let's compute the dispersion of the longitudes as SD of all values, then divide by 360:
+console.log('global vector longitude_p SD/360:', globalVectorLong_p_SDnorm, 'degrees');
 
 let moon_IF = myData.moon_IF;
 
@@ -134,7 +136,8 @@ const forceVectors = JSON.stringify({
     tractionEarth: globalVectorForce, 
     vectorDirection_E:globalVectorLong, 
     tractionSubject:globalVectorForce_p, 
-    vector_direction_S:globalVectorLong_p, 
+    vector_direction_S:globalVectorLong_p,
+    globalVectorLong_p_SDnorm:globalVectorLong_p_SDnorm, 
     moon_illumination_fraction: moon_IF}, null, 4);
 
 console.log(forceVectors);
