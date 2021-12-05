@@ -1,8 +1,8 @@
 {
-    "tractionEarth": "1.1889428385994742e+21",
-    "vectorDirection_E": -64.73085275035419,
-    "tractionSubject": 0.0015932232343041526,
-    "vector_direction_S": -64.73085275035419,
-    "globalVectorLong_p_SDnorm": 0.12028824997176621,
-    "moon_illumination_fraction": 0.015501120218045616
+    "tractionEarth": "1.1982506922609554e+21",
+    "vectorDirection_E": -64.23504367241067,
+    "tractionSubject": 0.001605696070031431,
+    "vector_direction_S": -64.23504367241068,
+    "globalVectorLong_p_SDnorm1": 0.8797766982641663,
+    "moon_illumination_fraction": 0.017140610898397968
 }

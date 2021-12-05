@@ -1,5 +1,8 @@
 var FormData = require("form-data");
 const math = require('mathjs');
+const dotenv = require('dotenv');
+var result = require('dotenv').config();
+const weight = parseInt(process.env.WEIGHT);
 const { writeFile } = require("fs/promises");
 var fetch = require("node-fetch");
 var formdata = new FormData();
@@ -90,12 +93,12 @@ console.log('global vector longitude:', globalVectorLong, 'degrees');
 
 //Attraction force between planet and patient (80kg) is G * (mass1 * mass2)/dist^2 
 
-let forceMercuryEarth_p = G * (( 80 * myData.mercury_mass*10e+24 ) / Math.pow((myData.mercuryd*1000), 2) );
-let forceVenusEarth_p = G * (( 80 * myData.venus_mass*10e+24 ) / Math.pow((myData.venusd*1000), 2) );
-let forceMarsEarth_p = G * (( 80 * myData.mars_mass*10e+24 ) / Math.pow((myData.marsd*1000), 2) );
-let forceJupiterEarth_p = G * (( 80 * myData.jupiter_mass*10e+24 ) / Math.pow((myData.jupiterd*1000), 2) );
-let forceSaturnEarth_p = G * (( 80 * myData.saturn_mass*10e+24 ) / Math.pow((myData.saturnd*1000), 2) );
-let forceNeptuneEarth_p = G * (( 80 * myData.neptune_mass*10e+24 ) / Math.pow((myData.neptuned*1000), 2) );
+let forceMercuryEarth_p = G * (( weight * myData.mercury_mass*10e+24 ) / Math.pow((myData.mercuryd*1000), 2) );
+let forceVenusEarth_p = G * (( weight * myData.venus_mass*10e+24 ) / Math.pow((myData.venusd*1000), 2) );
+let forceMarsEarth_p = G * (( weight * myData.mars_mass*10e+24 ) / Math.pow((myData.marsd*1000), 2) );
+let forceJupiterEarth_p = G * (( weight * myData.jupiter_mass*10e+24 ) / Math.pow((myData.jupiterd*1000), 2) );
+let forceSaturnEarth_p = G * (( weight * myData.saturn_mass*10e+24 ) / Math.pow((myData.saturnd*1000), 2) );
+let forceNeptuneEarth_p = G * (( weight * myData.neptune_mass*10e+24 ) / Math.pow((myData.neptuned*1000), 2) );
 
 console.log('Attraction force between Mercury and patient:', forceMercuryEarth_p.toExponential(),'Newtons');
 console.log('Attraction force between Venus and patient:', forceVenusEarth_p.toExponential(),'Newtons');
@@ -124,11 +127,14 @@ let globalVectorLong_p = Math.atan(y_p/x_p) * 180 / Math.PI;
 let globalVectorForce_p = Math.sqrt((x_p**2) + (y_p**2));
 let globalVectorLong_p_SD = math.std(myData.mercuryg.lon,myData.venusg.lon,myData.marsg.lon, myData.jupiterg.lon,myData.saturng.lon,myData.neptuneg.lon);
 let globalVectorLong_p_SDnorm = globalVectorLong_p_SD/360;
+let globalVectorLong_p_SDnorm1 = 1 - globalVectorLong_p_SD/360;
 
 console.log('global vector longitude_p:', globalVectorLong_p, 'degrees');
 console.log('global vector force_p:', globalVectorForce_p, 'Newtons');
 // let's compute the dispersion of the longitudes as SD of all values, then divide by 360:
 console.log('global vector longitude_p SD/360:', globalVectorLong_p_SDnorm, 'degrees');
+// The effect sould be bigger when the dispersion is smaller, hence let's make it 1-SDnorm
+console.log('global vector longitude_p SD/360 inverted:', globalVectorLong_p_SDnorm1, 'degrees');
 
 let moon_IF = myData.moon_IF;
 
@@ -137,7 +143,7 @@ const forceVectors = JSON.stringify({
     vectorDirection_E:globalVectorLong, 
     tractionSubject:globalVectorForce_p, 
     vector_direction_S:globalVectorLong_p,
-    globalVectorLong_p_SDnorm:globalVectorLong_p_SDnorm, 
+    globalVectorLong_p_SDnorm1:globalVectorLong_p_SDnorm1, 
     moon_illumination_fraction: moon_IF}, null, 4);
 
 console.log(forceVectors);
