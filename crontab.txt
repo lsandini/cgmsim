@@ -5,7 +5,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 */5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash get-all.sh
 */5 * * * * cd /home/MYUSERNAME/cgmsim && /bin/bash upload-cgmsim.sh
 #30 23 * * * cd /home/MYUSERNAME/cgmsim && /bin/bash surprise.sh
-0 */6 * * * cd /home/MYUSERNAME/cgmsim && /bin/bash planets.sh
+0 */1 * * * cd /home/MYUSERNAME/cgmsim && /bin/bash planets.sh
 
 
 # If you want to use the PUMP simulation enable this block of 5 lines
