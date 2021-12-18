@@ -141,9 +141,13 @@ console.log('previous SGV:',sgvValues[0].sgv);
 console.log('new deviation:', BGI_ins + (liver_bgi * 18) + (carbs * 18) + (lastPerls[0].noise * 18 *6));
 console.log('new SGV without planets:',variation);
 console.log('planetAndMoon factor:', planetAndMoon);
-console.log('new SGV with planetss:',variationPlanets);
-var sgv_no_pump = Math.floor(variationPlanets);
-//var sgv_no_pump = Math.floor(variation);
+console.log('new SGV with planets:',variationPlanets);
+
+// SELECT VARIATION WITH OR WITHOUT PLANETS
+//=========================================
+//var sgv_no_pump = Math.floor(variationPlanets); //with planets
+var sgv_no_pump = Math.floor(variation); //without planets;
+
 
 
 var limited_sgv_no_pump = sgv_no_pump;
