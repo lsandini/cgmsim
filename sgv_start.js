@@ -108,7 +108,7 @@ console.log('planetFactorA * conjunction or planetFactor:', planetFactor);
 
  // the illumination fraction if the moon varies from 0 to 1, divide by 10 and add 1 !
 
-let moonFactor = ((planets.moon_illumination_fraction)/50) + 1 ;
+let moonFactor = ((planets.moon_illumination_fraction)/100) + 1 ;
 console.log('moonFactor:', moonFactor);
 
 // END OF PLANETS SECTION
@@ -145,8 +145,8 @@ console.log('new SGV with planets:',variationPlanets);
 
 // SELECT VARIATION WITH OR WITHOUT PLANETS
 //=========================================
-//var sgv_no_pump = Math.floor(variationPlanets); //with planets
-var sgv_no_pump = Math.floor(variation); //without planets;
+var sgv_no_pump = Math.floor(variationPlanets); //with planets
+//var sgv_no_pump = Math.floor(variation); //without planets;
 
 
 
