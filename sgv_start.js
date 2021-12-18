@@ -93,8 +93,8 @@ console.log('this is the last perlin noise value:', lastPerls[0].noise);
 const planets = require('./files/forceVectors.json');
  // the traction of planets is about 0.0015 (Newtons), add 1 !
 let planetFactorA = 1 + planets.tractionSubject;
- // mkae the inverted dispertion a conjunction factor:
-let conjunctionFactor = 1 + (planets.globalVectorLong_p_SDnorm1 / 100);
+ // make the inverted dispersion a conjunction factor:
+let conjunctionFactor = 1 + (planets.globalVectorLong_p_SDnorm1 / 1000);
 
  // apply the correction due to inverted dispersion;
 let planetFactor = planetFactorA * conjunctionFactor;
