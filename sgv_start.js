@@ -108,7 +108,7 @@ console.log('planetFactorA * conjunction or planetFactor:', planetFactor);
 
  // the illumination fraction if the moon varies from 0 to 1, divide by 10 and add 1 !
 
-let moonFactor = ((planets.moon_illumination_fraction)/200) + 1 ;
+let moonFactor = ((planets.moon_illumination_fraction)/120) + 1 ;
 console.log('moonFactor:', moonFactor);
 
 // END OF PLANETS SECTION
