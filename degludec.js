@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 var result = require('dotenv').config();
 require('json.date-extensions');
 JSON.useDateParser();
-var resultDetAct = 0;
+var resultDegAct = 0;
 const { pi } = require("mathjs");
 
 const weight = parseInt(process.env.WEIGHT);
@@ -16,7 +16,7 @@ console.log(degludec_data);
 let timeSinceDegludecAct = degludec_data.map(entry => {
     var time = entry.time;
     var dose = entry.dose;
-    var duration = (42);
+    var duration = 42;
     var peak = (duration/3);
     var tp = peak;
     var td = duration;
