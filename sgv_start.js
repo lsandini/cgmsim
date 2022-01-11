@@ -28,13 +28,17 @@ var DET = require('./files/last_detemir_aggrACT.json');
 var jsonDET = JSON.stringify(DET);
 var detAct = JSON.parse(jsonDET);
 
+var DEG = require('./files/last_degludec_aggrACT.json');
+var jsonDEG = JSON.stringify(DEG);
+var degAct = JSON.parse(jsonDEG);
+
 // ENABLE THIS FOR PUMP SIMULATION
 //=================================
 // var pumpAct = require('./files/pumpBasalAct.json');
 // var jsonPumpAct = JSON.stringify(pumpAct);
 // var pumpBasalAct = JSON.parse(jsonPumpAct);
 
-let globalBasalAct = glaAct + detAct;
+let globalBasalAct = glaAct + detAct + degAct;
 let globalMealtimeAct = NRAct[0];
 
 let globlalInsulinAct = globalBasalAct + globalMealtimeAct;
@@ -167,7 +171,7 @@ fs.writeFile("./files/cgmsim-sgv.json", dictstring, function(err, result) {
 
 
 console.log('-------------------------------------------');
-console.log('glaAct:',glaAct,'detAct:',detAct,'total basal act:', globalBasalAct);
+console.log('glaAct:',glaAct,'detAct:',detAct,'degAct',degAct,'total basal act:', globalBasalAct);
 console.log('-------------------------------------------');
 console.log('total mealtime insulin activity:',globalMealtimeAct);
 console.log('-------------------------------------------');

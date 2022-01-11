@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "added degludec.js with duration 42h"
+git commit -m "cleaning"
 git push -u origin main
