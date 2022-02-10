@@ -22,14 +22,14 @@
   },
   "homepage": "https://github.com/lsandini/cgmsim#readme",
   "dependencies": {
-    "@babel/runtime": "^7.15.4",
+    "@babel/runtime": "^7.17.2",
     "dotenv": "^9.0.2",
     "form-data": "^4.0.0",
     "json.date-extensions": "^1.2.2",
-    "mathjs": "^9.5.1",
+    "mathjs": "^9.5.2",
     "moment": "^2.29.1",
     "node-fetch": "^2.6.5",
-    "node-libcurl": "^2.3.3",
+    "node-libcurl": "^2.3.4",
     "perlin-noise": "^0.0.1"
   }
 }

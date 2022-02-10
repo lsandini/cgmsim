@@ -4,6 +4,10 @@ sudo apt update
 
 sudo apt upgrade
 
+sudo curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
+
+sudo bash nodesource_setup.sh
+
 sudo apt install nodejs
 
 sudo apt install npm
@@ -31,3 +35,5 @@ npm install node-libcurl
 npm add @babel/runtime
 
 npm i form-data
+
+npm audit fix
