@@ -28,6 +28,7 @@
     "json.date-extensions": "^1.2.2",
     "mathjs": "^9.5.2",
     "moment": "^2.29.1",
+    "mongodb": "^4.5.0",
     "node-fetch": "^2.6.5",
     "node-libcurl": "^2.3.4",
     "perlin-noise": "^0.0.1"
